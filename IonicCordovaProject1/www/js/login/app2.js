@@ -22,7 +22,7 @@ angular.module('starter2', ['ionic', 'starter2.controllers', 'ngCordova',
             StatusBar.styleLightContent();
         }
 
-        /*Push notifications Debug*/
+        /*Push notifications Debug
         
         var push = new Ionic.Push({
             "debug": true
@@ -30,10 +30,10 @@ angular.module('starter2', ['ionic', 'starter2.controllers', 'ngCordova',
  
         push.register(function(token) {
             console.log("Device token:",token.token);
-        });
+        });*/
         
 
-        /*push notifications Native
+        /*push notifications Native*/
 
         var io = Ionic.io();
         var push = new Ionic.Push({
@@ -53,7 +53,7 @@ angular.module('starter2', ['ionic', 'starter2.controllers', 'ngCordova',
         }
 
         // Just add some dummy data..
-        user.set('name', 'Emiliano');
+        user.set('name', 'Emilianoo');
         user.set('bio', 'This is my little bio');
         user.save();
 
@@ -63,7 +63,7 @@ angular.module('starter2', ['ionic', 'starter2.controllers', 'ngCordova',
             user.save();
         };
         push.register(callback);
-        */
+        
     });/*close ionicplatform ready*/
 
 })
@@ -76,7 +76,7 @@ angular.module('starter2', ['ionic', 'starter2.controllers', 'ngCordova',
     $ionicAppProvider.identify({
         app_id: 'cc6c1ddc',
         api_key: '45556158349ec0523cccf0f766fc10aee728c86d0c4cf69d', //key public
-        dev_push: true
+        dev_push: false //true is for debug mode and generate a temporary device token
     });
 
 })

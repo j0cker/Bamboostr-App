@@ -4,7 +4,7 @@ ADDED from AndroidManifest.xml:2:1
 	android:hardwareAccelerated
 		ADDED from AndroidManifest.xml:2:11
 	xmlns:android
-		ADDED from AndroidManifest.xml:2:161
+		ADDED from AndroidManifest.xml:2:134
 	package
 		ADDED from AndroidManifest.xml:2:102
 	android:versionName
@@ -41,7 +41,7 @@ ADDED from AndroidManifest.xml:5:5
 		ADDED from AndroidManifest.xml:5:53
 	android:hardwareAccelerated
 		ADDED from AndroidManifest.xml:5:18
-activity#io.cordova.myappe2785d518e9f4f6ea03055878dd7a400.MainActivity
+activity#com.boogapp.bamboostr.MainActivity
 ADDED from AndroidManifest.xml:6:9
 	android:windowSoftInputMode
 		ADDED from AndroidManifest.xml:6:285
