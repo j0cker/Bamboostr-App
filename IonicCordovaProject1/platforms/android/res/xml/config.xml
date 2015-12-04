@@ -1,6 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget defaultlocale="en-US" id="io.cordova.myappe2785d518e9f4f6ea03055878dd7a400" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
     <preference name="loglevel" value="DEBUG" />
+    <feature name="PushPlugin">
+        <param name="android-package" value="com.plugin.gcm.PushPlugin" />
+    </feature>
+    <feature name="ImagePicker">
+        <param name="android-package" value="com.synconset.ImagePicker" />
+    </feature>
+    <feature name="Clipboard">
+        <param name="android-package" value="com.verso.cordova.clipboard.Clipboard" />
+    </feature>
+    <feature name="Instagram">
+        <param name="android-package" value="com.vladstirbu.cordova.CDVInstagramPlugin" />
+    </feature>
+    <feature name="DatePickerPlugin">
+        <param name="android-package" value="com.plugin.datepicker.DatePickerPlugin" />
+    </feature>
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
@@ -8,17 +23,23 @@
         <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="Keyboard">
-        <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
+    </feature>
+    <feature name="NativeAudio">
+        <param name="android-package" value="de.neofonie.cordova.plugin.nativeaudio.NativeAudio" />
     </feature>
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
     </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
@@ -46,7 +67,8 @@
     <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access launch-external="yes" origin="*" />
+    <allow-navigation href="*" />
     <vs:features />
     <preference name="SplashScreen" value="screen" />
     <preference name="windows-target-version" value="8.1" />
@@ -55,4 +77,12 @@
     <preference name="Orientation" value="portrait" />
     <icon density="xhdpi" src="resources\android\icon\drawable-xhdpi-icon.png" />
     <vs:plugin name="org.apache.cordova.splashscreen" version="1.0.0" />
+    <preference name="KeepRunning" value="True" />
+    <preference name="ShowTitle" value="True" />
+    <preference name="InAppBrowserStorageEnabled" value="True" />
+    <preference name="SuppressesIncrementalRendering" value="True" />
+    <vs:plugin name="org.apache.cordova.file-transfer" version="0.5.0" />
+    <vs:plugin name="org.apache.cordova.file" version="1.3.3" />
+    <preference name="Fullscreen" value="True" />
+    <vs:plugin name="org.apache.cordova.inappbrowser" version="0.6.0" />
 </widget>

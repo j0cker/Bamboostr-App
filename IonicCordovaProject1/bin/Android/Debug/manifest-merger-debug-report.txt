@@ -69,10 +69,90 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:9:17
 	android:name
 		ADDED from AndroidManifest.xml:9:27
+activity#com.plugin.gcm.PushHandlerActivity
+ADDED from AndroidManifest.xml:12:9
+	android:exported
+		ADDED from AndroidManifest.xml:12:19
+	android:name
+		ADDED from AndroidManifest.xml:12:43
+receiver#com.plugin.gcm.CordovaGCMBroadcastReceiver
+ADDED from AndroidManifest.xml:13:9
+	android:permission
+		ADDED from AndroidManifest.xml:13:77
+	android:name
+		ADDED from AndroidManifest.xml:13:19
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+io.cordova.myappe2785d518e9f4f6ea03055878dd7a400
+ADDED from AndroidManifest.xml:14:13
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from AndroidManifest.xml:15:17
+	android:name
+		ADDED from AndroidManifest.xml:15:25
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from AndroidManifest.xml:16:17
+	android:name
+		ADDED from AndroidManifest.xml:16:25
+category#io.cordova.myappe2785d518e9f4f6ea03055878dd7a400
+ADDED from AndroidManifest.xml:17:17
+	android:name
+		ADDED from AndroidManifest.xml:17:27
+service#com.plugin.gcm.GCMIntentService
+ADDED from AndroidManifest.xml:20:9
+	android:name
+		ADDED from AndroidManifest.xml:20:18
+activity#com.synconset.MultiImageChooserActivity
+ADDED from AndroidManifest.xml:21:9
+	android:label
+		ADDED from AndroidManifest.xml:21:19
+	android:theme
+		ADDED from AndroidManifest.xml:21:113
+	android:name
+		ADDED from AndroidManifest.xml:21:58
 uses-sdk
-ADDED from AndroidManifest.xml:13:5
+ADDED from AndroidManifest.xml:23:5
 MERGED from android:CordovaLib:unspecified:debug:25:5
 	android:targetSdkVersion
-		ADDED from AndroidManifest.xml:13:42
+		ADDED from AndroidManifest.xml:23:42
 	android:minSdkVersion
-		ADDED from AndroidManifest.xml:13:15
+		ADDED from AndroidManifest.xml:23:15
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:24:5
+	android:name
+		ADDED from AndroidManifest.xml:24:22
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from AndroidManifest.xml:25:5
+	android:name
+		ADDED from AndroidManifest.xml:25:22
+uses-permission#android.permission.WAKE_LOCK
+ADDED from AndroidManifest.xml:26:5
+	android:name
+		ADDED from AndroidManifest.xml:26:22
+uses-permission#android.permission.VIBRATE
+ADDED from AndroidManifest.xml:27:5
+	android:name
+		ADDED from AndroidManifest.xml:27:22
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from AndroidManifest.xml:28:5
+	android:name
+		ADDED from AndroidManifest.xml:28:22
+permission#io.cordova.myappe2785d518e9f4f6ea03055878dd7a400.permission.C2D_MESSAGE
+ADDED from AndroidManifest.xml:29:5
+	android:protectionLevel
+		ADDED from AndroidManifest.xml:29:104
+	android:name
+		ADDED from AndroidManifest.xml:29:17
+uses-permission#io.cordova.myappe2785d518e9f4f6ea03055878dd7a400.permission.C2D_MESSAGE
+ADDED from AndroidManifest.xml:30:5
+	android:name
+		ADDED from AndroidManifest.xml:30:22
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:31:5
+	android:name
+		ADDED from AndroidManifest.xml:31:22
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from AndroidManifest.xml:32:5
+	android:name
+		ADDED from AndroidManifest.xml:32:22
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from AndroidManifest.xml:33:5
+	android:name
+		ADDED from AndroidManifest.xml:33:22

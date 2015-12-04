@@ -47,7 +47,7 @@
                  .then(function (response) {
                      console.log(response);
                      if (response.data.id_token && response.data.user && response.data.identify) {
-                         localStorage.setItem('bamboostr', JSON.stringify([{ id_token: response.data.id_token, identify: response.data.identify, screen_name: response.data.user, red: 'twitter' }]));
+                         localStorage.setItem('bamboostr', JSON.stringify([{ id_token: response.data.id_token, identify: response.data.identify, screen_name: response.data.user, image_red: response.data.image_red, red: 'twitter' }]));
 
                          var storage = JSON.parse(localStorage.getItem('bamboostr'));
                          //console.log(storage[0].id_token);
@@ -67,6 +67,7 @@
 
             // results
         }, function (error) {
+            console.log(error);
             $timeout(function () {
                 $ionicLoading.hide();
             }, 2000);
@@ -89,7 +90,7 @@
             $http.get(url, { cache: true, params: { access_token: result.access_token, secundaria: "no" } })
                  .then(function (response) {
                      if (response.data.id_token && response.data.identify && response.data.user) {
-                         localStorage.setItem('bamboostr', JSON.stringify([{ id_token: response.data.id_token, identify: response.data.identify, screen_name: response.data.user, red: 'facebook' }]));
+                         localStorage.setItem('bamboostr', JSON.stringify([{ id_token: response.data.id_token, identify: response.data.identify, screen_name: response.data.user, image_red: response.data.image_red, red: 'facebook' }]));
 
                          var storage = JSON.parse(localStorage.getItem('bamboostr'));
                          //console.log(storage[0].id_token);

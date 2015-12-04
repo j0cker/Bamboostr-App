@@ -1,6 +1,157 @@
-angular.module('starter.controllers', [])
+/* global angular, document, window */
+'use strict';
 
-.controller('DashCtrl', function ($scope, $ionicTabsDelegate, $http, $rootScope, $ionicLoading, $timeout) {
+var imagenes = "";
+var redesAdd = [];
+
+angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64', 'ngCordova.plugins.instagram'])
+
+.controller('AppCtrl', function ($ionicLoading, $ionicActionSheet, $ionicPlatform, $http, $ionicSideMenuDelegate, $cordovaDatePicker, $cordovaImagePicker, $scope, $rootScope, $ionicModal, $ionicPopover, $timeout, $cordovaNativeAudio, $cordovaInstagram, $base64) {
+
+    $ionicPlatform.ready(function() {
+        iniSounds($cordovaNativeAudio);
+
+    });
+
+    /*opcion para enviar normal o programado*/
+    $rootScope.opcion = 0;
+
+    escribir($rootScope, $ionicActionSheet, $cordovaNativeAudio, $ionicModal, $cordovaImagePicker, $cordovaDatePicker, $http, $ionicLoading, $cordovaInstagram, $base64);
+
+    agregarRed($rootScope, $cordovaNativeAudio);
+
+
+    /****TimePicker****/
+
+    var optionsDate = {
+        date: new Date(),
+        mode: 'date', // or 'time'
+        minDate: new Date() - 10000,
+        allowOldDates: true,
+        allowFutureDates: false,
+        doneButtonLabel: 'DONE',
+        doneButtonColor: '#F2F3F4',
+        cancelButtonLabel: 'CANCEL',
+        cancelButtonColor: '#000000'
+    };
+
+    $rootScope.date = function () {
+        $rootScope.opcion = 1;
+        $cordovaNativeAudio.play('click');
+
+        $cordovaDatePicker.show(optionsDate).then(function (date) {
+            $rootScope.timePicker(date);
+        });
+    };
+
+    $rootScope.timePicker = function (date) {
+        document.getElementById('time').style.display = "block";
+        document.getElementById('dateShow').style.display = "block";
+        document.getElementById('dateShow').innerHTML = "<strong>" + convertDate(date) + "</strong>";
+
+    };
+
+    /****TimePicker****/
+
+    $scope.isExpanded = false;
+    $scope.hasHeaderFabLeft = false;
+    $scope.hasHeaderFabRight = false;
+
+    var navIcons = document.getElementsByClassName('ion-navicon');
+    for (var i = 0; i < navIcons.length; i++) {
+        navIcons.addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    }
+
+    ////////////////////////////////////////
+    // Layout Methods
+    ////////////////////////////////////////
+
+    $scope.hideNavBar = function () {
+        document.getElementsByTagName('ion-nav-bar')[0].style.display = 'none';
+    };
+
+    $scope.showNavBar = function () {
+        document.getElementsByTagName('ion-nav-bar')[0].style.display = 'block';
+    };
+
+    $scope.noHeader = function () {
+        var content = document.getElementsByTagName('ion-content');
+        for (var i = 0; i < content.length; i++) {
+            if (content[i].classList.contains('has-header')) {
+                content[i].classList.toggle('has-header');
+            }
+        }
+    };
+
+    $scope.setExpanded = function (bool) {
+        $scope.isExpanded = bool;
+    };
+
+    $scope.setHeaderFab = function (location) {
+        var hasHeaderFabLeft = false;
+        var hasHeaderFabRight = false;
+
+        switch (location) {
+            case 'left':
+                hasHeaderFabLeft = true;
+                break;
+            case 'right':
+                hasHeaderFabRight = true;
+                break;
+        }
+
+        $scope.hasHeaderFabLeft = hasHeaderFabLeft;
+        $scope.hasHeaderFabRight = hasHeaderFabRight;
+    };
+
+    $scope.hasHeader = function () {
+        var content = document.getElementsByTagName('ion-content');
+        for (var i = 0; i < content.length; i++) {
+            if (!content[i].classList.contains('has-header')) {
+                content[i].classList.toggle('has-header');
+            }
+        }
+
+    };
+
+    $scope.hideHeader = function () {
+        $scope.hideNavBar();
+        $scope.noHeader();
+    };
+
+    $scope.showHeader = function () {
+        $scope.showNavBar();
+        $scope.hasHeader();
+    };
+
+    $scope.clearFabs = function () {
+        var fabs = document.getElementsByClassName('button-fab');
+        if (fabs.length && fabs.length > 1) {
+            fabs[0].remove();
+        }
+    };
+
+    $rootScope.sound = function () {
+        $cordovaNativeAudio.play('click');
+    }
+})
+
+.controller('DashCtrl', function ($cordovaNativeAudio, $ionicSideMenuDelegate, $scope, $cordovaDatePicker, $cordovaImagePicker, $ionicTabsDelegate, $ionicModal, $http, $rootScope, $ionicLoading, $timeout, $ionicUser, $ionicPush, $ionicActionSheet, $ionicPopup, ionicMaterialInk, ionicMaterialMotion) {
+
+    /*material Design*/
+    // Set Header
+    $scope.$parent.showHeader();
+    $scope.$parent.clearFabs();
+    $scope.isExpanded = false;
+    $scope.$parent.setExpanded(false);
+    $scope.$parent.setHeaderFab(false);
+
+    // Set Ink
+    ionicMaterialInk.displayEffect();
+    /*fin material design*/
+
     $ionicLoading.show({
         template: '<ion-spinner class="dots"></ion-spinner>',
         animation: 'fade-in',
@@ -8,14 +159,62 @@ angular.module('starter.controllers', [])
         maxWidth: 200,
         showDelay: 0
     });
+
+    /*push notifications
+    var user = $ionicUser.get();
+    if (!user.user_id) {
+        // Set your user_id here, or generate a random one.
+        user.user_id = $ionicUser.generateGUID();
+    };
+
+    // Identify your user with the Ionic User Service
+    $ionicUser.identify(user).then(function () {
+        $scope.identified = true;
+        console.log('Identified user ' + user.name + '\n ID ' + user.user_id);
+        console.log('Ionic Push: Registering user');
+
+        // Register with the Ionic Push service.  All parameters are optional.
+        $ionicPush.register({
+            canShowAlert: true, //Can pushes show an alert on your screen?
+            canSetBadge: true, //Can pushes update app icon badges?
+            canPlaySound: true, //Can notifications play a sound?
+            canRunActionsOnWake: true, //Can run actions outside the app,
+            onNotification: function (notification) {
+                // Handle new push notifications here
+                console.log(notification);
+                return true;
+            }
+        });
+    });
+
+    $rootScope.$on('$cordovaPush:tokenReceived', function (event, data) {
+        //alert("Successfully registered token " + data.token);
+        console.log('Ionic Push: Got token ', data.token, data.platform);
+        $scope.token = data.token;
+    });
+    /*fin push notifications*/
+
     var storage = JSON.parse(localStorage.getItem('bamboostr'));
     $rootScope.id_token = storage[0].id_token;
     $rootScope.user = storage[0].screen_name;
     $rootScope.identify = storage[0].identify;
     $rootScope.red = storage[0].red;
+    $rootScope.image_red = storage[0].image_red;
     console.log($rootScope.id_token);
+
+    var url = "http://bamboostr.com/scripts/get-program-message.php";
+    $http.get(url, { cache: false, params: { id_token: $rootScope.id_token } })
+         .then(function (response) {
+             if(response.data.data)
+               document.getElementById("msgPro123F").style.background = "";
+             $rootScope.msgPro = response.data.data;
+
+         }, function (response) {
+             /*ERROR*/
+         });
+
     var url = 'http://bamboostr.com/app/get-cuentas.php';
-    $http.get(url, { cache: true, params: { id_token: $rootScope.id_token, user: $rootScope.user, identify: $rootScope.identify } })
+    $http.get(url, { cache: false, params: { id_token: $rootScope.id_token, user: $rootScope.user, identify: $rootScope.identify } })
          .then(function (response) {
              $rootScope.account = [];
              var c = 0;
@@ -25,14 +224,10 @@ angular.module('starter.controllers', [])
                  c++;
              }
              
-             $timeout(function () {
-                 $ionicLoading.hide();
-             }, 2000);
+             $ionicLoading.hide();
          }, function (response) {
              /*ERROR*/
-             $timeout(function () {
-                 $ionicLoading.hide();
-             }, 2000);
+             $ionicLoading.hide();
          });
     
 
@@ -42,7 +237,57 @@ angular.module('starter.controllers', [])
         console.log("Entro a opciones");
     }
 
-    /*swipe*/
+    $scope.remove = function (id) {
+
+        $cordovaNativeAudio.play('click');
+
+        $ionicLoading.show({
+            template: '<ion-spinner class="dots"></ion-spinner>',
+            animation: 'fade-in',
+            showBackdrop: true,
+            maxWidth: 200,
+            showDelay: 0
+        });
+        console.log(id);
+        var url = 'http://bamboostr.com/app/delete-program-message.php';
+        $http.get(url, { cache: false, params: { id:id } })
+           .then(function (response) {
+               /*almacenar nuevo usuario*/
+               console.log(response);
+               console.log("Mensaje eliminado");
+               var confirmPopup = $ionicPopup.confirm({
+                   title: 'Mensaje eliminado'
+               });
+               confirmPopup.then(function (res) {
+                   window.location = "in.html";
+               });
+               $timeout(function () {
+                   $ionicLoading.hide();
+               }, 2000);
+           }, function (response) {
+               /*ERROR*/
+               $timeout(function () {
+                   $ionicLoading.hide();
+               }, 2000);
+           });
+    }
+
+    /*Action Sheet*/
+    $scope.sheet = function (id) {
+
+        $cordovaNativeAudio.play('click');
+
+        // Show the action sheet
+        var hideSheet = $ionicActionSheet.show({
+            titleText: 'Borrar Mensaje?',
+            destructiveText: '<button class="button button-assertive">Delete</button>',
+            destructiveButtonClicked: function () {
+                $scope.remove(id);
+            }
+        });
+    } /*fin button sheet*/
+
+    /*swipe tabs*/
     $scope.goForward = function () {
         var selected = $ionicTabsDelegate.selectedIndex();
         if (selected != -1) {
@@ -57,18 +302,32 @@ angular.module('starter.controllers', [])
         }
     }
     /*fin swipe*/
+
+    $ionicSideMenuDelegate.canDragContent(false);
 })
 
-.controller('ChatsCtrl', function ($scope, Chats, $ionicTabsDelegate, $rootScope) {
+.controller('ChatsCtrl', function ($scope, Chats, $ionicTabsDelegate, $rootScope, $timeout, ionicMaterialInk, ionicMaterialMotion) {
 
-    console.log($rootScope.id_token);
+    /*material Design*/
+    // Set Header
+    $scope.$parent.showHeader();
+    $scope.$parent.clearFabs();
+    $scope.isExpanded = false;
+    $scope.$parent.setExpanded(false);
+    $scope.$parent.setHeaderFab(false);
+
+    // Set Ink
+    ionicMaterialInk.displayEffect();
+    /*fin material design*/
+
+  console.log($rootScope.id_token);
 
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
   }
 
-    /*swipe*/
+    /*swipe Tabs*/
   $scope.goForward = function () {
       var selected = $ionicTabsDelegate.selectedIndex();
       if (selected != -1) {
@@ -90,7 +349,19 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('AccountCtrl', function ($scope, $ionicTabsDelegate, $ionicLoading, $timeout, $cordovaOauth, $http, $rootScope, $ionicPopup, $ionicModal, $ionicActionSheet) {
+.controller('AccountCtrl', function ($scope, $ionicTabsDelegate, $cordovaNativeAudio, $ionicLoading, $timeout, $cordovaOauth, $http, $rootScope, $ionicPopup, $ionicModal, $ionicActionSheet, ionicMaterialInk, ionicMaterialMotion) {
+
+    /*material Design*/
+    // Set Header
+    $scope.$parent.showHeader();
+    $scope.$parent.clearFabs();
+    $scope.isExpanded = false;
+    $scope.$parent.setExpanded(false);
+    $scope.$parent.setHeaderFab(false);
+
+    // Set Ink
+    ionicMaterialInk.displayEffect();
+    /*fin material design*/
 
   console.log($rootScope.id_token);
 
@@ -99,6 +370,9 @@ angular.module('starter.controllers', [])
   };
 
   $scope.remove = function (identify, red, type, id) {
+
+      //$cordovaNativeAudio.play('click');
+
       console.log($rootScope.identify + " " + identify + " " + red + " " + type + " " + id);
       $ionicLoading.show({
           template: '<ion-spinner class="dots"></ion-spinner>',
@@ -167,8 +441,11 @@ angular.module('starter.controllers', [])
       }
   }
 
-    /*Action Sheet*/
+  /*Action Sheet*/
   $scope.sheet = function (identify, red, type, id) {
+
+      //$cordovaNativeAudio.play('click');
+
       // Show the action sheet
       var hideSheet = $ionicActionSheet.show({
           titleText: 'Borrar Cuenta?',
@@ -180,6 +457,9 @@ angular.module('starter.controllers', [])
   } /*fin button sheet*/
 
   $scope.modalOpen = function () {
+
+      $cordovaNativeAudio.play('click');
+
       $ionicModal.fromTemplateUrl('modal.html',
           {
               scope: $scope,
@@ -190,9 +470,27 @@ angular.module('starter.controllers', [])
 
               $scope.hideModal = function () {
                   modal.hide();
+                  modal.remove();
+                  $cordovaNativeAudio.play('click');
               }
 
+              //Cleanup the modal when we're done with it!
+              $scope.$on('$destroy', function () {
+                  $scope.modal.remove();
+              });
+              // Execute action on hide modal
+              $scope.$on('modal.hidden', function () {
+                  // Execute action
+              });
+              // Execute action on remove modal
+              $scope.$on('modal.removed', function () {
+                  // Execute action
+              });
+
               $scope.facebookLogin = function () {
+
+                  $cordovaNativeAudio.play('click');
+
                   $ionicLoading.show({
                       template: '<ion-spinner class="dots"></ion-spinner>',
                       animation: 'fade-in',
@@ -202,6 +500,7 @@ angular.module('starter.controllers', [])
                   });
 
                   $cordovaOauth.facebook("464694450276578", ["user_about_me", "user_activities", "user_birthday", "user_education_history", "user_events", "user_groups", "user_hometown", "user_interests", "user_likes", "user_location", "user_photos", "user_relationships", "user_relationship_details", "user_religion_politics", "user_status", "user_videos", "user_website", "email", "manage_pages", "read_stream", "read_page_mailboxes", "read_insights", "ads_management", "read_friendlists", "publish_actions", "public_profile", "user_friends", "read_mailbox", "user_posts", "ads_read", "ads_management"]).then(function (result) {
+
                       //console.log(result);
                       //console.log(result.access_token);
                       //window.location = "in.html";
@@ -223,10 +522,10 @@ angular.module('starter.controllers', [])
                                        } else {
                                            console.log('You are not sure');
                                        }*/
-                                       window.location = "in.html";
+                                       //window.location = "in.html";
                                    });
                                } else {
-                                 window.location = "in.html";
+                                 //window.location = "in.html";
                                }
                                $timeout(function () {
                                    $ionicLoading.hide();
@@ -249,6 +548,9 @@ angular.module('starter.controllers', [])
               }/*fin facebook login*/
 
               $scope.twitterLogin = function () {
+
+                  $cordovaNativeAudio.play('click');
+
                   var api_key = "JSkvmSToy2nUwUoaqeDYLmPeG"; //Enter your Consumer Key (API Key)
                   var api_secret = "Eeuv68S2e6NqkxvTUNoIuPKtEnhQm1X5BUOUD5hZ1DfK2EV6FC"; // Enter your Consumer Secret (API Secret)
 
@@ -298,10 +600,44 @@ angular.module('starter.controllers', [])
               } /*fin button twitterLogin*/
 
               $scope.instagramLogin = function () {
-
+                  $cordovaNativeAudio.play('click');
                   $cordovaOauth.instagram('1785b2c2431844fca017e967bf72b439', ["basic", "comments", "relationships", "likes"]).then(function (result) {
-                      console.log(result);
-                      console.log(result.access_token);
+                      //console.log(result);
+                      //console.log(result.access_token);
+                      
+                      var url = 'http://bamboostr.com/app/login-instagram.php';
+                      $http.get(url, { cache: false, params: { access_token: result.access_token, secundaria: "si", id_token: $rootScope.id_token, user: $rootScope.user, identify: $rootScope.identify, red: $rootScope.red } })
+                           .then(function (response) {
+                               console.log(response.data);
+                               /*almacenar nuevo usuario*/
+                               if (response.data && response.data.id_token && response.data.user && response.data.identify) {
+                                   console.log("cuenta agregada");
+                                   var confirmPopup = $ionicPopup.confirm({
+                                       title: 'Agrega nueva red social',
+                                       template: 'Red social agregada: ' + response.data.user
+                                   });
+                                   confirmPopup.then(function (res) {
+                                       /*if (res) {
+                                           console.log('You are sure');
+                                       } else {
+                                           console.log('You are not sure');
+                                       }*/
+                                       window.location = "in.html";
+                                   });
+                               } else {
+                                   window.location = "in.html";
+                               }
+                               $timeout(function () {
+                                   $ionicLoading.hide();
+                               }, 2000);
+                           }, function (response) {
+                               /*ERROR*/
+                               $timeout(function () {
+                                   $ionicLoading.hide();
+                               }, 2000);
+                           });
+                  
+
                   }, function (error) {
                       console.log("ERROR");
                   })
@@ -312,6 +648,7 @@ angular.module('starter.controllers', [])
     /*Fin Modal*/
 
   $scope.signOut = function () {
+      $cordovaNativeAudio.play('click');
       $ionicLoading.show({
           template: '<ion-spinner class="dots"></ion-spinner>',
           animation: 'fade-in',
@@ -327,7 +664,7 @@ angular.module('starter.controllers', [])
       }, 2000);
   };
 
-    /*swipe*/
+    /*swipe Tabs*/
   $scope.goForward = function () {
       var selected = $ionicTabsDelegate.selectedIndex();
       if (selected != -1) {
@@ -343,3 +680,575 @@ angular.module('starter.controllers', [])
   }
     /*fin swipe*/
 });
+
+/********Functions****************/
+function convertDate(inputFormat) {
+    function pad(s) { return (s < 10) ? '0' + s : s; }
+    var d = new Date(inputFormat);
+    return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join('-');
+};
+
+function iniSounds($cordovaNativeAudio) {
+    $cordovaNativeAudio.preloadSimple('click', 'audio/tap2.mp3').then(function (msg) {
+        console.log(msg);
+    }, function (error) {
+        console.log(error);
+    });
+};
+
+function escribir($rootScope, $ionicActionSheet, $cordovaNativeAudio, $ionicModal, $cordovaImagePicker, $cordovaDatePicker, $http, $ionicLoading, $cordovaInstagram, $base64) {
+
+    $rootScope.countLe = 0;
+
+    $rootScope.count = function () {
+        $rootScope.countLe = document.getElementById("countEs").value.length;
+    };
+
+    var optionsImage = {
+        maximumImagesCount: 10,
+        width: 800,
+        height: 800,
+        quality: 80
+    };
+
+    /*Action Sheet*/
+    $rootScope.imageSheet = function () {
+
+        $cordovaNativeAudio.play('click');
+        /* Editor Creative Adobe
+        var featherEditor = new Aviary.Feather({
+            apiKey: 'f64c8f2d43bb40e5ae583f3665be32f9',
+            theme: 'light', // Check out our new 'light' and 'dark' themes!
+            tools: ['draw', 'stickers'],
+            onSave: function (imageID, newURL) {
+                var img = document.getElementById(imageID);
+                img.src = newURL;
+            }
+        });
+        */
+
+
+        // Show the action sheet
+        var hideSheet = $ionicActionSheet.show({
+            titleText: 'Borrar o Editar Imagen?',
+            
+            /*buttons: [
+                { text: "<a>Editar imagen</a>" },
+            ],
+            buttonClicked: function (index) {
+                console.log(index);
+                if (index == 0) {
+                    console.log("editor");*/
+
+                    /* Editor Creative Adobe
+                    
+                    featherEditor.launch({
+                        image: 'imagenPre',
+                        //url: document.getElementById("imagenPre").getAttribute("src")
+                        url: 'http://bamboostr.com/images/fan-page.png'
+                    });
+                    return false;
+                    */
+
+                    /* 
+                    var image45, container, kit;
+
+                    image45 = new Image();
+                    image45.src = "http://bamboostr.com/images/fan-page.png";
+
+                    image45.onload = function () {
+                        container = document.querySelector("div#editor");
+                        kit = new ImglyKit({
+                            image: image45,
+                            container: container,
+                            assetsUrl: "lib/photoeditorsdk/assets", // Change this to where your assets are
+                            ui: {
+                                enabled: true // UI is disabled per default
+                            }
+                        });
+                        kit.run();
+                    };
+                    *//*
+                }
+                return true;
+            },*/
+
+            destructiveText: '<button class="button button-assertive">Delete</button>',
+            destructiveButtonClicked: function () {
+                $cordovaNativeAudio.play('click');
+                imagenes = "";
+                document.getElementById("imagenPre").src = "";
+                document.getElementById("imagenItem").style.display = "none";
+                hideSheet();
+            }
+
+        });
+    } /*fin button sheet*/
+    
+    $rootScope.timePickerObject = {
+
+        inputEpochTime: ((new Date()).getHours() * 60 * 60),  //Optional
+        step: 15,  //Optional
+        format: 24,  //Optional
+        titleLabel: '24-hour Format',  //Optional
+        setLabel: 'Set',  //Optional
+        closeLabel: 'Close',  //Optional
+        setButtonType: 'button-positive',  //Optional
+        closeButtonType: 'button-stable',  //Optional
+        callback: function (val) {    //Mandatory
+            if (typeof (val) === 'undefined') {
+                console.log('Time not selected');
+            } else {
+                $rootScope.timePickerObject.inputEpochTime = val;
+                var selectedTime = new Date(val * 1000);
+                console.log('Selected epoch is : ', val, 'and the time is ', selectedTime.getUTCHours(), ':', selectedTime.getUTCMinutes(), 'in UTC');
+            }
+        }
+    };
+
+    $rootScope.image = function () {
+
+        $cordovaNativeAudio.play('click');
+        imagenes = "";
+        console.log("Imagen");
+        $cordovaImagePicker.getPictures(optionsImage)
+            .then(function (results) {
+                for (var i = 0; i < results.length; i++) {
+                    imagenes = "";
+                    console.log('Image URI: ' + results[i]);
+                    imagenes += "" + imagenes + "" + results[i] + ",";
+                }
+                if (imagenes != "") {
+                    document.getElementById('imagenItem').style.display = "block";
+                    document.getElementById('imagenPre').src = results[0];
+                }
+            }, function (error) {
+                // error getting photos
+            });
+    };
+    imagenes = '';
+    $rootScope.enviar = function () {
+
+        $cordovaNativeAudio.play('click');
+
+        var horario = Date().split(" ");
+        var husoHorario = horario[5];
+        console.log("Huso Horario " + husoHorario);
+        if (document.getElementById('imagenPre').src != "file:///android_asset/www/in.html") {
+            var img = document.getElementById('imagenPre');
+            var imageURI = img.src;
+            var options = new FileUploadOptions();
+            options.fileKey = "fileImage";
+            options.fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
+            options.mimeType = "image/jpeg";
+            options.chunkedMode = false;
+            options.headers = {
+                Connection: "close"
+            };
+
+            var params = new Object();
+            params.fullpath = imageURI;
+            params.name = options.fileName;
+            options.params = params;
+
+
+            var ft = new FileTransfer();
+            ft.upload(imageURI, "http://bamboostr.com/subirImagenes.php", win, fail, options);
+
+            function win(r) {
+                console.log("Response = " + r.response + " Code = " + r.responseCode + " Sent = " + r.bytesSent);
+                imagenes = '' + r.response + ',';
+                condicionesEnviar(imagenes, $rootScope.countLe, $http, $rootScope, $ionicLoading, $cordovaInstagram, $base64);
+            }
+
+            
+
+            function fail(error) {
+                imagenes = '';
+                alert("An error has occurred: Code = " + error.code);
+                console.log("upload error source " + error.source + "upload error target " + error.target);
+            }
+        } else {
+            condicionesEnviar('', $rootScope.countLe, $http, $rootScope, $ionicLoading, $cordovaInstagram, $base64);
+        }
+    };
+
+    $rootScope.escribir = function () {
+
+        $rootScope.countLe = 0;
+        $cordovaNativeAudio.play('click');
+
+        $ionicModal.fromTemplateUrl('escribir.html',
+            {
+                scope: $rootScope,
+                animation: 'slide-in-up'
+            }).then(function (modal) {
+                $rootScope.modal = modal;
+                $rootScope.modal.show();
+                $rootScope.opcion = 0;
+
+                $rootScope.hideModal = function () {
+                    modal.hide();
+                    $rootScope.modal.remove();
+                    $cordovaNativeAudio.play('click');
+                    imagenes = '';
+                    redesAdd = [];
+                    $rootScope.opcion = 0;
+                }
+
+                //Cleanup the modal when we're done with it!
+                $rootScope.$on('$destroy', function () {
+                    $rootScope.modal.remove();
+                });
+                // Execute action on hide modal
+                $rootScope.$on('modal.hidden', function () {
+                    // Execute action
+                });
+                // Execute action on remove modal
+                $rootScope.$on('modal.removed', function () {
+                    // Execute action
+                });
+
+            }
+
+    )
+    };
+    /*Fin Modal*/
+};
+
+function agregarRed($rootScope, $cordovaNativeAudio) {
+    $rootScope.agregarRed = function (red, screen_name, identify, identify_account, image) {
+
+        $cordovaNativeAudio.play('click');
+        var i = 0, a = 0;
+        while (a < redesAdd.length) {
+            if (redesAdd[a]['id'] == identify && redesAdd[a]['idAccount'] == identify_account) {
+                i++;
+            }
+            a++;
+        }
+        if (i == 0) {
+            //no hay nada agregemos
+            console.log("agregar " + identify);
+            redesAdd[redesAdd.length] = new Array();
+            if (red == "twitter")
+                identify = "" + identify + "tw";
+            if (red == "facebook")
+                identify = "" + identify + "fa";
+            if (red == "instagram")
+                identify = "" + identify + "in";
+            redesAdd[redesAdd.length - 1]['id'] = identify;
+            redesAdd[redesAdd.length - 1]['idAccount'] = identify_account;
+            redesAdd[redesAdd.length - 1]['name'] = screen_name;
+            redesAdd[redesAdd.length - 1]['image'] = image;
+        } else {
+            //hay uno quitemos
+            console.log("quitar");
+            var i = 0;
+            while (i < redesAdd.length) {
+                if (redesAdd[i]['id'] == identify && redesAdd[i]['idAccount'] == identify_account) {
+                    redesAdd.splice(i, 1);
+                    i = redesAdd.length;
+                }
+                i++;
+            }
+        }
+        //document.getElementById("list" + identify + "" + identify_account).setAttribute("ng-click", "quitarRed('" + red + "','" + screen_name + "','" + identify + "','" + identify_account + "');");
+        //document.getElementById("list" + identify + "" + identify_account).style.display = "none";
+        contadorTeclasCalc();
+        console.log(redesAdd);
+    };
+};
+
+function contadorTeclasCalc() {
+    var faDisplay = 0;
+    var twDisplay = 0;
+    var inDisplay = 0;
+    for (var i = 0; i < redesAdd.length; i++) {
+        if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "fa")
+            faDisplay = 1;
+        if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "tw")
+            twDisplay = 1;
+        if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "in")
+            inDisplay = 1;
+
+    }
+    if (faDisplay == 1) {
+        document.getElementById("contadorFa").style.display = "inline-block";
+        //teclas();
+    } else {
+        document.getElementById("contadorFa").style.display = "none";
+    }
+    if (twDisplay == 1) {
+        document.getElementById("contadorTw").style.display = "inline-block";
+        //teclas();
+    } else {
+        document.getElementById("contadorTw").style.display = "none";
+    }
+    if (inDisplay == 1) {
+        document.getElementById("contadorIn").style.display = "inline-block";
+        //teclas();
+    } else {
+        document.getElementById("contadorIn").style.display = "none";
+    }
+    if (typeof redesAdd[0] == "undefined") {
+        document.getElementById("contadorFa").style.display = "none";
+        document.getElementById("contadorTw").style.display = "none";
+        document.getElementById("contadorIn").style.display = "none";
+    }
+};
+
+function condicionesEnviar(image, caracteres, $http, $rootScope, $ionicLoading, $cordovaInstagram, $base64) {
+
+    $ionicLoading.show({
+        template: '<ion-spinner class="dots"></ion-spinner>',
+        animation: 'fade-in',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: 0
+    });
+
+
+    console.log("|" + document.getElementById("time2").textContent + "|dates|" + document.getElementById("dateShow").textContent + "|" + $rootScope.opcion);
+
+
+    var finishSend = 0;
+  
+    var contador = caracteres;
+    var texto = document.getElementById("countEs").value;
+    console.log(contador + " " + texto + " " + document.getElementById('imagenPre').src + " " + image);
+    var imagenesAgregadasArray = [];
+  imagenesAgregadasArray = image.split(",");
+  if (typeof redesAdd[0] == "undefined") {
+      $ionicLoading.hide();
+      alert("No has agregado ninguna cuenta");
+
+  } else if((contador==0 || texto=="") && image==""){
+      $ionicLoading.hide();
+	alert("No has escrito nada");
+  }
+  else if ( ((contador.length>=141 || contador.length<0) && document.getElementById("contadorTw").style.display=="inline-block") || ((imagenes!="" && contador.length+24>=141) && document.getElementById("contadorTw").style.display=="inline-block")){
+      $ionicLoading.hide();
+      alert("Muchos caracteres");
+  } 
+  else if( ((contador.length>=2001 || contador.length<0) && document.getElementById("contadorFa").style.display=="inline-block") ){
+      $ionicLoading.hide();
+      alert("Muchos caracteres");
+  } else if (((contador.length >= 2001 || contador.length < 0) && document.getElementById("contadorIn").style.display == "inline-block")) {
+      $ionicLoading.hide();
+      alert("Muchos caracteres");
+  } else if (((!document.getElementById("dateShow").textContent && document.getElementById("time2").textContent && $rootScope.opcion == 1) ||
+            (document.getElementById("dateShow").textContent && !document.getElementById("time2").textContent && $rootScope.opcion==1))) {
+      $ionicLoading.hide();
+      alert("Completa la fecha correctamente");
+  } else if ($rootScope.opcion == 0) {
+      //ga('send', 'event', 'Mensaje Normal', 'click', 'Mensaje Normal');
+      var contador = document.getElementById("countEs").value;
+      //normales
+      //Si dice escribir ponemos el mensaje vac√≠o
+      if (contador == "")
+          contador = "";
+      for (var i = 0; i < redesAdd.length; i++) {
+          var idAccountAdd = '';
+          var userTempName = '';
+          if (typeof redesAdd[i]['idAccount'] != "undefined") {
+              idAccountAdd = redesAdd[i]['idAccount'];
+          }
+          if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "tw") {
+              var urlPostMassive = 'http://bamboostr.com/twitter/post-media.php';
+              userTempName = redesAdd[i]['name'];
+          }
+          else if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "fa") {
+              var urlPostMassive = 'http://bamboostr.com/facebook/post-message.php';
+              userTempName = redesAdd[i]['name'];
+          }
+          if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "in" && image == "") {
+              $ionicLoading.hide();
+              alert("Instagram necesita imagen");
+          } else if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "in" && image != "") {
+              function getBase64Image(img) {
+                  var canvas = document.createElement("canvas");
+                  console.log(img.src);
+                  canvas.width = img.width;
+                  canvas.height = img.height;
+                  var ctx = canvas.getContext("2d");
+                  ctx.drawImage(img, 0, 0, img.width, img.height);
+                  var dataURL = canvas.toDataURL("image/png");
+                  return dataURL;
+              }
+              
+              var data = getBase64Image(document.getElementById('imagenPre'));
+              console.log(data);
+              //data:image/jpeg;base64,/
+              Instagram.share(data, contador, function (err) {
+                  if (err) {
+                      // Didn't work
+                      console.log(err);
+                      alert("ERROR Instagram" + err);
+                      finishSend++;
+                      $ionicLoading.hide();
+                      
+                      
+                  } else {
+                      //work
+                      finishSend++;
+                      if (finishSend == redesAdd.length) {
+                          alert("Se ha enviado el Mensaje a todos Los destinatarios");
+                          //document.getElementById("countES").value = "";
+                          $rootScope.modal.remove();
+                          imagenes = '';
+                          $ionicLoading.hide();
+                          redesAdd = [];
+                      }
+                  }
+              });
+          } else {
+              var parametros = {
+                  images: image, description: contador,
+                  identify: redesAdd[i]['id'].substr(0, redesAdd[i]['id'].length - 2),
+                  idPost: idAccountAdd.substr(0, idAccountAdd.length - 2),
+                  screen_name: userTempName
+              };
+              $http.get(urlPostMassive, { cache: false, params: parametros })
+                               .then(function (response) {
+                                   var response = response.data;
+                                   console.log(response);
+                                   /*
+                                   indexOf is not defined
+                      if (response.indexOf("|") != "-1")
+                        responseArray = response.split("|");
+                      if (response.indexOf("does not have permission to post photos on this page") != "-1") {
+                          alert("Error al Enviar: No tienes Permisos para publicar Fotos. " + responseArray[1]);
+                      } else if (response.indexOf("misusing this feature") != "-1") {
+                          alert("Error al Enviar: Has violado las polÌticas de Facebook tras mandar mensajes masivos. …sta cuenta ser· Suspendida por un periodo temporal. Recomendaciones: 1. Aumente el Tiempo de intervalo entre mensajes enviados y/Û Disminuya La cantidad de Mensajes enviados. 2. Recomendamos Mandar un mensaje a 25 Grupos cada 30 Minutos. " + responseArray[1]);
+                      } else if (response.indexOf("Permissions error") != "-1") {
+                          alert("Error al Enviar: No tienes Permisos para publicar. " + responseArray[1]);
+                      } else if (response.indexOf("Unsupported post request") != "-1") {
+                          alert("Error al Enviar: PeticiÛn no Soportada. " + responseArray[1]);
+                      } else if (response.indexOf("An unknown error") != "-1") {
+                          alert("Error al Enviar: ERROR Desconocido. " + responseArray[1]);
+                      } else if (response.indexOf("This app has been restricted from uploading photos") != "-1") {
+                          alert("Error al Enviar: …sta App tiene restricciones al subir im·genes con Texto incluido. Porfavor Retire el texto de la im·gen. " + responseArray[1]);
+                      } else if (response.indexOf("Status is over 140 characters") != "-1") {
+                          alert("Su mensaje No se EnviÛ. Exceso de Caracteres.");
+                      } else if (response.indexOf("false") != "-1" && response.indexOf("created_at") == "-1") {
+                          alert("Error al Enviar: " + responseArray[0] + ". " + responseArray[1]);
+                      }
+                      */
+                                   finishSend++;
+                                   if (finishSend == redesAdd.length) {
+                                       alert("Se ha enviado el Mensaje a todos Los destinatarios");
+                                       //document.getElementById("countES").value = "";
+                                       $rootScope.modal.remove();
+                                       imagenes = '';
+                                       $ionicLoading.hide();
+                                       redesAdd = [];
+                                   }
+                               }, function (response) {
+                                   /*ERROR*/
+                                   alert("ERROR");
+                                   finishSend++;
+                                   $ionicLoading.hide();
+                               });
+          }
+      }
+  } else {
+      //ga('send', 'event', 'Mensaje Programado', 'click', 'Mensaje Programado');
+      var contador = document.getElementById("countEs").value;
+      //programados
+      var timePrArray = document.getElementById("time2").textContent.toString();
+      console.log(timePrArray);
+      var timePr, timePrH, timePrMArray, timePrM = [];
+      timePr = timePrArray.split(":");
+      console.log(timePr);
+      timePrH = timePr[0];
+      timePrMArray = timePr[1].split(" ");
+      timePrM = timePrMArray[0];
+      var timeP = timePrH + "" + timePrM;
+      var date = new Date();
+      var timeRFecha = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+      var timeR = date.getHours() + "" + date.getMinutes() + " ";
+
+      var timeRFechaParse = monthNames[parseInt(date.getMonth())] + " " + date.getDate() + ", " + date.getFullYear();
+      var timePFechaArray = document.getElementById("dateShow").textContent.split("-");
+      var timePFechaParse = monthNames[parseInt(timePFechaArray[1] - 1)] + " " + timePFechaArray[0] + ", " + timePFechaArray[2];
+
+      if (Date.parse(timePFechaParse) >= Date.parse(timeRFechaParse)) {
+          if (parseInt(timeP) > parseInt(timeR) && (Date.parse(timePFechaParse) == Date.parse(timeRFechaParse)) || (Date.parse(timePFechaParse) > Date.parse(timeRFechaParse))) {
+              $rootScope.opcion = 1;
+              //Si dice escribir ponemos el mensaje vac√≠o
+              if (contador == "")
+                  contador = "";
+              for (var i = 0; i < redesAdd.length; i++) {
+                  var idAccountAdd = '';
+                  var userTempName = '';
+                  var redMsg = '';
+                  if (typeof redesAdd[i]['idAccount'] != "undefined") {
+                      idAccountAdd = redesAdd[i]['idAccount'];
+                  }
+                  if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "tw") {
+                      if ($rootScope.opcion == 1) {
+                          var urlPostMassive = 'http://bamboostr.com/scripts/post-program-message.php';
+                      } else {
+                          var urlPostMassive = 'http://bamboostr.com/scripts/post-draft-message.php';
+                      }
+                      userTempName = redesAdd[i]['name'];
+                      redMsg = 'twitter';
+                  }
+                  else if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "fa") {
+                      if ($rootScope.opcion == 1) {
+                          var urlPostMassive = 'http://bamboostr.com/scripts/post-program-message.php';
+                      } else {
+                          var urlPostMassive = 'http://bamboostr.com/scripts/post-draft-message.php';
+                      }
+                      userTempName = redesAdd[i]['name'];
+                      redMsg = 'facebook';
+                  }
+                  else if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "in") {
+                      if ($rootScope.opcion == 1) {
+                          var urlPostMassive = 'http://bamboostr.com/scripts/post-program-message.php';
+                      } else {
+                          var urlPostMassive = 'http://bamboostr.com/scripts/post-draft-message.php';
+                      }
+                      userTempName = redesAdd[i]['name'];
+                      redMsg = 'instagram';
+                  }
+                  var fecha = document.getElementById("dateShow").textContent + " " +
+                              timePrH + ":" + timePrM;
+                  var parametros = {
+                      images: image, description: contador,
+                      identify: redesAdd[i]['id'].substr(0, redesAdd[i]['id'].length - 2),
+                      idPost: idAccountAdd.substr(0, idAccountAdd.length - 2),
+                      screen_name: userTempName, fecha: fecha, red: redMsg, id_token: $rootScope.id_token,
+                      horario: husoHorario, image_profile: redesAdd[i]['image']
+                  };
+                  $http.get(urlPostMassive, { cache: false, params: parametros })
+                           .then(function (response) {
+                          finishSend++;
+                          if (finishSend == redesAdd.length) {
+                              alert("Mensaje(s) Programado(s) Correctamente");
+                              //document.getElementById("countEs").value = "";
+                              $rootScope.modal.remove();
+                              imagenes = '';
+                              $ionicLoading.hide();
+                              redesAdd = [];
+                              window.location = "in.html";
+                          }
+                     }, function (response) {
+                         /*ERROR*/
+                         alert("ERROR");
+                         finishSend++;
+                         $ionicLoading.hide();
+                  });
+              }//fin for
+          } else {
+              alert("La hora Del Mensaje esta mal.");
+              $ionicLoading.hide();
+          }
+      } else {
+          alert("La Fecha Del Mensaje esta mal.");
+          $ionicLoading.hide();
+      }
+  }
+  
+};
