@@ -20,7 +20,39 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
       //StatusBar.styleLightContent();
       StatusBar.styleDefault();
     }
-  });
+
+    /*push notifications IO*/
+
+    var io = Ionic.io();
+    var push = new Ionic.Push({
+        "onNotification": function (notification) {
+            alert('Received push notification!');
+        },
+        "pluginConfig": {
+            "android": {
+                "iconColor": "#0000FF"
+            }
+        }
+    });
+    var user = Ionic.User.current();
+
+    if (!user.id) {
+        user.id = Ionic.User.anonymousId();
+    }
+
+      // Just add some dummy data..
+    user.set('name', 'Emiliano');
+    user.set('bio', 'This is my little bio');
+    user.save();
+
+    var callback = function (data) {
+        push.addTokenToUser(user);
+        user.save();
+    };
+    push.register(callback);
+
+      
+  });/*fiin $ionicPlatform.ready*/
 
 
   $rootScope.$on('$ionicView.enter', function () {
@@ -28,25 +60,20 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
       /*quita el slide o swipe en el menu y solo se activara con click*/
       $ionicSideMenuDelegate.canDragContent(false);
   });
-
 })
 
 
-.config(function ($stateProvider, $urlRouterProvider, $ionicAppProvider, $ionicConfigProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider, $ionicAppProvider) {
 
     // Turn off caching for demo simplicity's sake
     //$ionicConfigProvider.views.maxCache(0);
 
-    /*Registrar App*/
+    /*Registrar App para push notifications*/
     $ionicAppProvider.identify({
-        app_id: '44abfde2',
-        api_key: 'b40281e9c79cd33998e643eaed25d05ed7a9b0f182424502',
+        app_id: 'cc6c1ddc',
+        api_key: '45556158349ec0523cccf0f766fc10aee728c86d0c4cf69d', //key public
         dev_push: true
     });
-
-    /*Push Notifications IO*/
-
- 
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router

@@ -20,12 +20,9 @@
     <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
     <link href="lib/style.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
     <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
     <script src="lib/ion-md-input/js/ion-md-input.min.js"></script>
-    <!--<script src="js/ionic.bundle.min.js"></script>-->
-    <script src="js/angular-websocket.js"></script>
-    <script src="js/ionic-core.js"></script>
-    <script src="js/ionic-push.js"></script>
     <script src="lib/ionic-timepicker/dist/ionic-timepicker.bundle.min.js"></script>
     <script src="lib/ionic-timepicker/dist/ionic-timepicker.app.js"></script>
     <script src="lib/ionic-timepicker/dist/ionic-timepicker.directive.js"></script>
@@ -35,8 +32,12 @@
     <script src="js/base64.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="js/angular-websocket.js"></script>
     <script src="js/ng-cordova.min.js"></script>
-    <script src="cordova.js"></script>
+    <script src="lib/ionic-core.js"></script>
+    <script src="lib/ionic-push.js"></script>
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+    <!--<script src="cordova.js"></script>-->
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
