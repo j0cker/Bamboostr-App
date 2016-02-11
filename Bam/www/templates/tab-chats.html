@@ -1,0 +1,24 @@
+﻿<ion-view>
+  <ion-content style="top: 0px; margin-bottom: 50px;">
+      <button class="button button-block button-positive" modal-select="" ng-model="someOtherModel" options="selectableNames" modal-title="Selecciona una categoría" header-footer-class="bar-assertive" has-search="true" sub-header-class="bar-positive" on-select="getOpt(newValue, oldValue)">
+          Selecciona tu categoría
+          <div class="option">
+              <h2>{{option.name}}</h2>
+          </div>
+      </button>
+      <div class="list card" ng-repeat="categorias in categorias">
+          <div ng-click="sheetContenido({{categorias}});" class="item item-divider">
+            <span style="margin-left: 10px;">{{categorias.dominio}}</span> 
+            <span style="font-size: 30px; float: right;" class="icon ion-more"></span>
+          </div>
+          <div class="item item-body">
+              <div>
+                  <span style="float: right;">{{categorias.fecha}}</span><br />
+                  <p ng-click="copy({{categorias}},'1');">{{categorias.title}}</p><br />
+                  <p ng-click="copy({{categorias}},'2');">{{categorias.description}}</p><br />
+                  <div style="text-align: center;" ng-bind-html="categorias.images_img"></div>
+              </div>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,4123 @@
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_fonts.sass */
+.font, .regular-font, body, .container__description h3,
+.container__description ul li, .simple-form, .simple-form input[type="text"],
+.simple-form input[type="email"],
+.simple-form input[type="password"],
+.simple-form input[type="number"],
+.simple-form input[type="submit"],
+.simple-form textarea, .simple-form select, .alert, .header__container h2,
+.header__container h3, .navigation__item, .features h2, .customers h2, .customers h3, .license .license-header .license-header__text, .license-body .license-features li, .license-footer .license-footer--notice, #contact, #contact input, #contact textarea, .italic-font, .bold-font, h2, h4, .header__container h1, .sub-navigation__list a, .semibold-font, .semibold-italic-font, .container__description--center h3, .sub-navigation__item a, .license-footer .price {
+  font-family: "Source Sans Pro"; }
+
+/* line 4, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_fonts.sass */
+.regular-font, body, .container__description h3,
+.container__description ul li, .simple-form, .simple-form input[type="text"],
+.simple-form input[type="email"],
+.simple-form input[type="password"],
+.simple-form input[type="number"],
+.simple-form input[type="submit"],
+.simple-form textarea, .simple-form select, .alert, .header__container h2,
+.header__container h3, .navigation__item, .features h2, .customers h2, .customers h3, .license .license-header .license-header__text, .license-body .license-features li, .license-footer .license-footer--notice, #contact, #contact input, #contact textarea {
+  font-weight: 300; }
+
+/* line 8, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_fonts.sass */
+.italic-font {
+  font-weight: 300;
+  font-style: italic; }
+
+/* line 13, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_fonts.sass */
+.bold-font, h2, h4, .container__description ul li, .header__container h1, .sub-navigation__list a {
+  font-weight: 600; }
+
+/* line 17, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_fonts.sass */
+.semibold-font, .semibold-italic-font, .container__description--center h3, .sub-navigation__item a, .license-footer .price {
+  font-weight: 400; }
+
+/* line 21, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_fonts.sass */
+.semibold-italic-font, .container__description--center h3 {
+  font-style: italic; }
+
+/* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_fonts.sass */
+.small-section-font, .footer-container__item h4 {
+  margin-bottom: 6px;
+  font-family: "Roboto", "sans-serif";
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #48525B; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+* {
+  box-sizing: border-box; }
+
+/* line 4, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+html,
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+/* line 18, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+html {
+  font-size: 62.5%; }
+
+/* line 24, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+/* line 29, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+h2 {
+  font-size: 3.2rem;
+  line-height: 4.0rem; }
+
+/* line 34, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+h3 {
+  font-size: 2.0rem;
+  line-height: 3rem; }
+
+/* line 38, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+h4 {
+  font-size: 2.0rem;
+  line-height: 2.2rem; }
+
+/* line 43, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+p,
+li,
+a,
+label {
+  font-size: 1.6rem; }
+
+/* line 49, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+a {
+  text-decoration: none;
+  color: #7C9BE1; }
+  /* line 53, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+  a:hover {
+    text-decoration: underline; }
+
+/* line 56, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+.page-wrapper {
+  width: 100%; }
+
+/* line 59, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+.odd {
+  padding: 20px 0;
+  background-color: #F9F9F9; }
+
+/* line 63, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/base/_general.sass */
+.even {
+  color: #48525B; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button-list {
+  padding: 30px 0;
+  text-align: center; }
+  /* line 5, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button-list li {
+    display: inline-block;
+    margin: 5px 10px; }
+
+/* line 9, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  transition: box-shadow 0.5s ease;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  font-family: "Roboto", "sans-serif";
+  font-size: 17px;
+  line-height: 40px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  color: white; }
+  /* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #4B79DE;
+    text-decoration: none; }
+  @media only screen and (max-width: 380px) {
+    /* line 9, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+    .button {
+      width: 230px; } }
+
+/* line 33, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button--blue {
+  background: #4B79DE; }
+  /* line 36, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button--blue:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.22); }
+
+/* line 39, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button--bordered {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+  color: #303030; }
+  /* line 45, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button--bordered:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+/* line 48, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button--bordered-apple {
+  padding-left: 40px;
+  background-image: url("/assets/images/documentation/ios-ded73f08.png");
+  background-repeat: no-repeat;
+  background-position: 5% 46%;
+  background-size: 20px; }
+  /* line 55, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button--bordered-apple:hover {
+    background-color: #FFFFFF; }
+
+/* line 58, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button--green {
+  border-color: #43C069;
+  background: #4EC87A;
+  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%); }
+  /* line 63, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button--green:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background: #4EC87A;
+    text-decoration: none; }
+
+/* line 68, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button--light {
+  margin-top: 5px;
+  background-color: none; }
+  /* line 72, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button--light:hover {
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.4); }
+
+/* line 76, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button__content__small {
+  text-decoration: underline; }
+
+/* line 79, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button__content {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 0px;
+  height: 185px;
+  background: #4B79DE;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7); }
+  /* line 90, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button__content a {
+    margin-top: 5px;
+    color: white;
+    color: rgba(255, 255, 255, 0.7); }
+
+/* line 95, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button__text {
+  padding-top: 14px; }
+
+/* line 98, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button__outer {
+  position: relative; }
+
+/* line 101, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+.button__inner {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  top: -22px;
+  left: -77px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  width: 145px;
+  height: 45px;
+  background-color: #4B79DE;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+  color: white; }
+  /* line 117, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button__inner:hover {
+    -webkit-animation: in 0.5s alternate;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.12), 0 4px 15px 0 rgba(0, 0, 0, 0.14); }
+  /* line 123, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button__inner:hover > .button__text {
+    display: none; }
+  /* line 126, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  .button__inner:hover > .button__content {
+    transition: opacity 0.15s ease-out 0.5s;
+    -webkit-transition: opacity 0.15s ease-out 0.5s;
+    opacity: 1;
+    width: 185px;
+    height: 195px;
+    padding: 15px; }
+
+@-webkit-keyframes in {
+  0% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(11% 36%, 89% 36%, 89% 64%, 11% 64%);
+    clip-path: polygon(11% 36%, 89% 36%, 89% 64%, 11% 64%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-in;
+    background-color: #4A90E2; }
+  20% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(3% 32.4%, 89.9% 24.8%, 98.3% 74.6%, 8.1% 65.9%);
+    clip-path: polygon(3% 32.4%, 89.9% 24.8%, 98.3% 74.6%, 8.1% 65.9%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-out;
+    background-color: #4A90E2; }
+  50% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0.5% 8.6%, 94% 22.7%, 100% 80.5%, 9.7% 91.3%);
+    clip-path: polygon(0.5% 8.6%, 94% 22.7%, 100% 80.5%, 9.7% 91.3%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-in;
+    background-color: #fff; }
+  70% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0% 7%, 99.4% 5.4%, 100% 96.7%, 3.2% 91.3%);
+    clip-path: polygon(0% 7%, 99.4% 5.4%, 100% 96.7%, 3.2% 91.3%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-out;
+    background-color: #4B79DE; }
+  95% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 185px;
+    height: 195px;
+    background-color: #4B79DE; }
+  100% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 185px;
+    height: 195px;
+    background-color: #4B79DE; } }
+
+@-moz-keyframes in {
+  0% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(11% 36%, 89% 36%, 89% 64%, 11% 64%);
+    clip-path: polygon(11% 36%, 89% 36%, 89% 64%, 11% 64%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-in;
+    background-color: #4A90E2; }
+  20% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(3% 32.4%, 89.9% 24.8%, 98.3% 74.6%, 8.1% 65.9%);
+    clip-path: polygon(3% 32.4%, 89.9% 24.8%, 98.3% 74.6%, 8.1% 65.9%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-out;
+    background-color: #4A90E2; }
+  50% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0.5% 8.6%, 94% 22.7%, 100% 80.5%, 9.7% 91.3%);
+    clip-path: polygon(0.5% 8.6%, 94% 22.7%, 100% 80.5%, 9.7% 91.3%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-in;
+    background-color: #fff; }
+  70% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0% 7%, 99.4% 5.4%, 100% 96.7%, 3.2% 91.3%);
+    clip-path: polygon(0% 7%, 99.4% 5.4%, 100% 96.7%, 3.2% 91.3%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-out;
+    background-color: #4B79DE; }
+  95% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 185px;
+    height: 195px;
+    background-color: #4B79DE; }
+  100% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 185px;
+    height: 195px;
+    background-color: #4B79DE; } }
+
+@-ms-keyframes in {
+  /* line 135, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  0% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(11% 36%, 89% 36%, 89% 64%, 11% 64%);
+    clip-path: polygon(11% 36%, 89% 36%, 89% 64%, 11% 64%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-in;
+    background-color: #4A90E2; }
+  /* line 146, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  20% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(3% 32.4%, 89.9% 24.8%, 98.3% 74.6%, 8.1% 65.9%);
+    clip-path: polygon(3% 32.4%, 89.9% 24.8%, 98.3% 74.6%, 8.1% 65.9%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-out;
+    background-color: #4A90E2; }
+  /* line 158, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  50% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0.5% 8.6%, 94% 22.7%, 100% 80.5%, 9.7% 91.3%);
+    clip-path: polygon(0.5% 8.6%, 94% 22.7%, 100% 80.5%, 9.7% 91.3%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-in;
+    background-color: #fff; }
+  /* line 169, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  70% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0% 7%, 99.4% 5.4%, 100% 96.7%, 3.2% 91.3%);
+    clip-path: polygon(0% 7%, 99.4% 5.4%, 100% 96.7%, 3.2% 91.3%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-out;
+    background-color: #4B79DE; }
+  /* line 180, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  95% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 185px;
+    height: 195px;
+    background-color: #4B79DE; }
+  /* line 190, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_button.sass */
+  100% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 185px;
+    height: 195px;
+    background-color: #4B79DE; } }
+
+@keyframes in {
+  0% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(11% 36%, 89% 36%, 89% 64%, 11% 64%);
+    clip-path: polygon(11% 36%, 89% 36%, 89% 64%, 11% 64%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-in;
+    background-color: #4A90E2; }
+  20% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(3% 32.4%, 89.9% 24.8%, 98.3% 74.6%, 8.1% 65.9%);
+    clip-path: polygon(3% 32.4%, 89.9% 24.8%, 98.3% 74.6%, 8.1% 65.9%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-out;
+    background-color: #4A90E2; }
+  50% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0.5% 8.6%, 94% 22.7%, 100% 80.5%, 9.7% 91.3%);
+    clip-path: polygon(0.5% 8.6%, 94% 22.7%, 100% 80.5%, 9.7% 91.3%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-in;
+    background-color: #fff; }
+  70% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0% 7%, 99.4% 5.4%, 100% 96.7%, 3.2% 91.3%);
+    clip-path: polygon(0% 7%, 99.4% 5.4%, 100% 96.7%, 3.2% 91.3%);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+    width: 185px;
+    height: 185px;
+    -webkit-animation-timing-function: ease-out;
+    background-color: #4B79DE; }
+  95% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 185px;
+    height: 195px;
+    background-color: #4B79DE; }
+  100% {
+    top: -92px;
+    left: -97px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 185px;
+    height: 195px;
+    background-color: #4B79DE; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+.container, .header__container {
+  max-width: 1010px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem; }
+  /* line 12, /home/photoeditorsdk/production/releases/20151130162841/node_modules/susy/sass/susy/output/support/_clearfix.scss */
+  .container:after, .header__container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 5, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+.container--small {
+  max-width: 770px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.0rem; }
+  /* line 12, /home/photoeditorsdk/production/releases/20151130162841/node_modules/susy/sass/susy/output/support/_clearfix.scss */
+  .container--small:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  /* line 9, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container--small h3 {
+    margin-top: 15px;
+    margin-bottom: 12px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #48525B; }
+  /* line 16, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container--small p {
+    padding-bottom: 20px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: #5A5A5A; }
+
+/* line 22, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+.container--large {
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 12, /home/photoeditorsdk/production/releases/20151130162841/node_modules/susy/sass/susy/output/support/_clearfix.scss */
+  .container--large:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+.container--subscription {
+  padding: 0; }
+  @media all and (min-width: 600px) {
+    /* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+    .container--subscription {
+      padding: 0 1.5rem; } }
+
+/* line 31, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+.container__image {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  text-align: center; }
+  /* line 36, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container__image img {
+    width: 90%;
+    max-width: 450px; }
+
+/* line 40, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+.container__description {
+  text-align: center; }
+  /* line 43, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container__description h3,
+  .container__description ul li {
+    font-size: 18px;
+    line-height: 28px;
+    color: #5A5A5A; }
+  /* line 50, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container__description h2,
+  .container__description h3,
+  .container__description ul {
+    margin-bottom: 35px; }
+  /* line 55, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container__description ul li {
+    line-height: 32px;
+    list-style: none; }
+    /* line 60, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+    .container__description ul li:before {
+      float: none;
+      display: inline-block;
+      margin: 8px 12px 0 0;
+      width: 16px;
+      height: 16px;
+      background: url("/assets/images/license/tick-3d161993.png") center no-repeat;
+      content: "";
+      -webkit-background-size: 100%;
+      -moz-background-size: 100%;
+      -o-background-size: 100%;
+      background-size: 100%; }
+
+/* line 70, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+.container__description--center {
+  display: table-cell;
+  margin: 0 auto;
+  max-width: 600px;
+  vertical-align: center;
+  text-align: center; }
+  /* line 77, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container__description--center h3 {
+    font-size: 36px;
+    line-height: 45px;
+    text-shadow: 0px 3px 6px #412901;
+    color: #FFFFFF; }
+
+@media all and (min-width: 800px) {
+  /* line 86, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container__image {
+    display: table-cell;
+    width: 50%;
+    text-align: left; }
+    /* line 91, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+    .container__image img {
+      width: 90%; }
+  /* line 94, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+  .container__description {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    text-align: left; }
+    /* line 100, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_container.sass */
+    .container__description.container__description--center {
+      width: 100%;
+      text-align: center; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table {
+  color: #48525B; }
+  /* line 5, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table h3 {
+    margin: 0 15px;
+    font-size: 2.4rem;
+    line-height: 4.0rem;
+    font-weight: 300; }
+  /* line 11, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table p {
+    font-size: 2.2rem;
+    line-height: 22px;
+    font-weight: bold; }
+  /* line 16, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table .call-to-action-container {
+    overflow: hidden;
+    *zoom: 1;
+    margin: 0 15px;
+    padding-bottom: 3em; }
+    /* line 21, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+    .pricing-table .call-to-action-container .side-notes {
+      float: left;
+      margin-top: 12px; }
+      /* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+      .pricing-table .call-to-action-container .side-notes a,
+      .pricing-table .call-to-action-container .side-notes a:visited {
+        margin-right: 2rem;
+        color: #aaa; }
+    /* line 30, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+    .pricing-table .call-to-action-container .call-to-action {
+      float: right; }
+
+/* line 33, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__list {
+  overflow: hidden;
+  margin-bottom: 1em;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  background-color: #fff; }
+
+/* line 42, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__list--checklist .pricing-table__item:not(.pricing-table__item--total) > div:first-child {
+  float: left;
+  width: 80%; }
+
+/* line 46, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__list--checklist .pricing-table__item:not(.pricing-table__item--total) > div:last-child {
+  float: right;
+  width: 20%; }
+
+/* line 50, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__item {
+  *zoom: 1;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 2rem 2rem 2rem 7.5rem;
+  font-size: 0;
+  color: #48525B; }
+  /* line 38, node_modules/compass-mixins/lib/compass/utilities/general/_clearfix.scss */
+  .pricing-table__item:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 57, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item:last-child {
+    border-bottom: none; }
+  /* line 60, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item p {
+    font-size: 20px;
+    line-height: 20px; }
+  /* line 64, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item > div:first-child {
+    float: left;
+    width: 60%; }
+  /* line 68, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item > div:last-child {
+    float: right;
+    width: 40%; }
+  @media all and (min-width: 600px) {
+    /* line 73, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+    .pricing-table__item > div:first-child,
+    .pricing-table__item > div:last-child {
+      width: auto; } }
+  /* line 77, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item .price {
+    font-size: 2.6rem;
+    line-height: 2.4rem;
+    font-weight: bold; }
+  /* line 82, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item .tagline,
+  .pricing-table__item .interval {
+    font-size: 1.6rem;
+    color: #999999; }
+  /* line 87, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item .tagline {
+    text-align: left; }
+  /* line 90, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item .interval {
+    text-align: right; }
+  /* line 93, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item .price {
+    text-align: right; }
+
+/* line 96, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__item--no-icon, .pricing-table__item--total {
+  padding-left: 2rem; }
+
+/* line 99, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__item--html5 {
+  background: url(/assets/images/payments/icon-html5-847eb7ea.png) 2rem 50% no-repeat; }
+
+/* line 102, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__item--ios {
+  background: url(/assets/images/payments/icon-ios-7f48494a.png) 2rem 50% no-repeat; }
+
+/* line 105, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__item--android {
+  background: url(/assets/images/payments/icon-android-5f981cc6.png) 2rem 50% no-repeat; }
+
+/* line 108, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+.pricing-table__item--total {
+  background-color: #F9F9F9; }
+  /* line 112, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_pricing_table.sass */
+  .pricing-table__item--total .price {
+    color: #4B79DE; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+.simple-form {
+  margin: 0 auto;
+  color: #48525B; }
+  /* line 6, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+  .simple-form ul.errors {
+    margin-bottom: 25px;
+    border: 3px solid #f00;
+    padding: 25px; }
+    /* line 11, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+    .simple-form ul.errors li {
+      margin-bottom: 7px;
+      color: #f00; }
+  /* line 15, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+  .simple-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #8b8b8b; }
+  /* line 21, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+  .simple-form label.inline {
+    display: inline-block;
+    margin-bottom: 0.7em; }
+  /* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+  .simple-form input[type="text"],
+  .simple-form input[type="email"],
+  .simple-form input[type="password"],
+  .simple-form input[type="number"],
+  .simple-form input[type="submit"],
+  .simple-form textarea {
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 17px; }
+  /* line 40, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+  .simple-form textarea {
+    min-height: 160px;
+    padding-top: 9px; }
+  /* line 44, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+  .simple-form select {
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 17px; }
+  /* line 53, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+  .simple-form .input-layer {
+    margin-bottom: 12px;
+    border-radius: 5px;
+    padding: 13px 20px 4px;
+    background-color: #FAFAFA; }
+    /* line 59, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+    .simple-form .input-layer label {
+      display: inline;
+      font-size: 13px;
+      font-weight: 400;
+      color: #2E3941; }
+    /* line 65, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+    .simple-form .input-layer input[type="text"],
+    .simple-form .input-layer input[type="email"],
+    .simple-form .input-layer input[type="password"],
+    .simple-form .input-layer input[type="number"],
+    .simple-form .input-layer input[type="submit"],
+    .simple-form .input-layer select {
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      width: 100%;
+      min-height: auto;
+      padding: 0;
+      background: none;
+      font-size: 20px;
+      line-height: 25px; }
+      /* line 81, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+      .simple-form .input-layer input[type="text"]:focus,
+      .simple-form .input-layer input[type="email"]:focus,
+      .simple-form .input-layer input[type="password"]:focus,
+      .simple-form .input-layer input[type="number"]:focus,
+      .simple-form .input-layer input[type="submit"]:focus,
+      .simple-form .input-layer select:focus {
+        outline: none; }
+    /* line 84, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+    .simple-form .input-layer span {
+      margin-left: 3px;
+      font-size: 13px;
+      font-weight: 200; }
+    /* line 91, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+    .simple-form .input-layer .date select {
+      display: inline-block;
+      width: 30%; }
+    /* line 95, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+    .simple-form .input-layer.error {
+      background-color: #FFEFEF; }
+      /* line 98, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+      .simple-form .input-layer.error label,
+      .simple-form .input-layer.error span {
+        color: #CB4749; }
+
+/* line 102, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_form.sass */
+.simple-form--login {
+  max-width: 450px; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_messages.sass */
+.alert {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  padding: 25px;
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; }
+
+/* line 12, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_messages.sass */
+.alert-error {
+  border-top: 1px solid #700;
+  border-bottom: 1px solid #700;
+  background-color: #f33;
+  color: #fff; }
+
+/* line 18, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_messages.sass */
+.alert-notice,
+.alert-success {
+  border-top: 1px solid #070;
+  border-bottom: 1px solid #070;
+  background-color: #36DC76;
+  color: #fff; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_overlay.sass */
+.overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
+/* line 11, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_overlay.sass */
+#editor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  /* line 18, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_overlay.sass */
+  #editor .imglykit-container {
+    border-radius: 0; }
+  @media only screen and (min-width: 768px) {
+    /* line 11, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_overlay.sass */
+    #editor {
+      top: 50%;
+      left: 50%;
+      margin-top: -300px;
+      margin-left: -400px;
+      width: 800px;
+      height: 600px; }
+      /* line 29, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_overlay.sass */
+      #editor .imglykit-container {
+        border-radius: 5px; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-amex {
+  background: transparent url("/assets/images/payments/cc-amex-3d6b0335.png") no-repeat 97% center !important; }
+
+/* line 4, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-dankord {
+  background: transparent url("/assets/images/payments/cc-dankord.png") no-repeat 97% center !important; }
+
+/* line 7, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-diners {
+  background: transparent url("/assets/images/payments/cc-diners-287ef036.png") no-repeat 97% center !important; }
+
+/* line 10, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-discover {
+  background: transparent url("/assets/images/payments/cc-discover-10aa796c.png") no-repeat 97% center !important; }
+
+/* line 13, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-electron {
+  background: transparent url("/assets/images/payments/cc-electron-8f4e9add.png") no-repeat 97% center !important; }
+
+/* line 16, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-jcb {
+  background: transparent url("/assets/images/payments/cc-jcb-742cbb95.png") no-repeat 97% center !important; }
+
+/* line 19, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-maestro {
+  background: transparent url("/assets/images/payments/cc-maestro-5cfcfc6e.png") no-repeat 97% center !important; }
+
+/* line 22, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-mastercard {
+  background: transparent url("/assets/images/payments/cc-mastercard-ca3758ec.png") no-repeat 97% center !important; }
+
+/* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-unionpay {
+  background: transparent url("/assets/images/payments/cc-unionpay-02aa7c59.png") no-repeat 97% center !important; }
+
+/* line 28, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/component/_credit_cards.sass */
+.cc-visa {
+  background: transparent url("/assets/images/payments/cc-visa-e383fcd5.png") no-repeat 97% center !important; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+.header {
+  margin-bottom: 15%;
+  background: radial-gradient(circle at bottom center, #4A90E2, rgba(255, 255, 255, 0.32) 45%), radial-gradient(ellipse at bottom right, #A155B7, rgba(255, 255, 255, 0.12) 20%), radial-gradient(ellipse at bottom left, #36DC76, rgba(255, 255, 255, 0.12) 20%);
+  background-size: cover; }
+  @media all and (min-width: 600px) {
+    /* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+    .header {
+      background: radial-gradient(ellipse at bottom center, #4A90E2, rgba(255, 255, 255, 0.62) 62%), radial-gradient(ellipse at bottom right, #A155B7, rgba(255, 255, 255, 0.12) 40%), radial-gradient(ellipse at bottom left, #36DC76, rgba(255, 255, 255, 0.12) 40%); } }
+  @media all and (min-width: 1000px) {
+    /* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+    .header {
+      margin-bottom: 160px; } }
+
+/* line 12, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+.header--tiny {
+  margin-bottom: 60px; }
+
+/* line 15, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+.header--large {
+  margin-bottom: 0;
+  min-height: 150px;
+  padding-bottom: 30px; }
+  @media all and (min-width: 600px) {
+    /* line 15, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+    .header--large {
+      background: radial-gradient(ellipse at bottom center, #4A90E2, rgba(255, 255, 255, 0.62) 62%), radial-gradient(ellipse at bottom right, #A155B7, rgba(255, 255, 255, 0.12) 40%), radial-gradient(ellipse at bottom left, #36DC76, rgba(255, 255, 255, 0.12) 40%); } }
+
+/* line 23, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+.header--carry {
+  margin-bottom: 8%;
+  padding-bottom: 6%; }
+  @media all and (min-width: 600px) {
+    /* line 23, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+    .header--carry {
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      background: radial-gradient(ellipse at bottom center, #4A90E2, rgba(255, 255, 255, 0.62) 62%), radial-gradient(ellipse at bottom right, #A155B7, rgba(255, 255, 255, 0.12) 40%), radial-gradient(ellipse at bottom left, #36DC76, rgba(255, 255, 255, 0.12) 40%); } }
+
+/* line 32, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+.header__container {
+  padding-top: 15%;
+  text-align: center;
+  color: #333333; }
+  @media all and (min-width: 1000px) {
+    /* line 32, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+    .header__container {
+      padding-top: 160px; } }
+  /* line 41, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+  .header__container h1,
+  .header__container h2,
+  .header__container h3 {
+    margin-bottom: 1rem; }
+  /* line 46, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+  .header__container h1 {
+    font-size: 3.8rem;
+    line-height: 4rem; }
+  /* line 51, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+  .header__container h2,
+  .header__container h3 {
+    font-size: 2.5rem;
+    line-height: 3.2rem; }
+
+/* line 58, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+.header__container--large h2,
+.header__container--large p {
+  margin-bottom: 4rem; }
+
+/* line 62, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+.header--image {
+  margin-bottom: -12%;
+  width: 100%; }
+
+/* line 66, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+.logo {
+  text-align: center; }
+  /* line 69, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+  .logo a {
+    display: block; }
+  /* line 72, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+  .logo img {
+    height: 40px;
+    padding-top: 5px; }
+
+@media all and (min-width: 400px) {
+  /* line 77, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+  .logo {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; } }
+
+@media all and (min-width: 580px) {
+  /* line 81, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+  .header--image {
+    width: 85%; }
+  /* line 84, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_header.sass */
+  .logo {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    text-align: left; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+.navigation {
+  margin: 0;
+  padding-top: 3px;
+  list-style: none;
+  text-align: center; }
+
+/* line 7, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+.navigation__item {
+  display: inline-block;
+  transition: all 300ms;
+  border-radius: 3px;
+  width: 100%; }
+  /* line 14, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+  .navigation__item a {
+    display: block;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 35px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333333; }
+  /* line 24, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+  .navigation__item:last-child {
+    margin-right: 0; }
+  /* line 27, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+  .navigation__item:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+/* line 30, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+.navigation__item--highlight {
+  background-color: #81be6d; }
+  /* line 33, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+  .navigation__item--highlight:hover {
+    background-color: #9ad288; }
+  /* line 36, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+  .navigation__item--highlight a {
+    color: #FFFFFF; }
+
+@media all and (min-width: 400px) {
+  /* line 40, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+  .navigation {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+  /* line 43, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+  .navigation__item {
+    width: auto; } }
+
+@media all and (min-width: 580px) {
+  /* line 47, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_navigation.sass */
+  .navigation {
+    width: 66.10169%;
+    float: right;
+    margin-right: 0;
+    text-align: right; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+.sub-navigation {
+  *zoom: 1;
+  margin-top: 40px; }
+  /* line 38, node_modules/compass-mixins/lib/compass/utilities/general/_clearfix.scss */
+  .sub-navigation:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media all and (min-width: 550px) {
+    /* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+    .sub-navigation {
+      width: 32.20339%;
+      float: left;
+      margin-right: 1.69492%;
+      margin-top: 0; } }
+  @media all and (min-width: 800px) {
+    /* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+    .sub-navigation {
+      width: 23.72881%;
+      float: left;
+      margin-right: 1.69492%; } }
+
+/* line 12, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+.sub-navigation__container {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px; }
+  @media all and (min-width: 550px) {
+    /* line 12, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+    .sub-navigation__container {
+      position: fixed;
+      border-bottom: none;
+      width: 30.50847%; } }
+  @media all and (min-width: 800px) {
+    /* line 12, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+    .sub-navigation__container {
+      width: 22.0339%;
+      max-width: 250px; } }
+
+/* line 26, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+.sub-navigation__list {
+  margin: 10px 0; }
+  /* line 29, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+  .sub-navigation__list ul {
+    list-style: none; }
+  /* line 32, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+  .sub-navigation__list a {
+    font-size: 16px;
+    line-height: 36px;
+    color: #4B79DE; }
+    /* line 37, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+    .sub-navigation__list a.active {
+      color: grey; }
+  /* line 40, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+  .sub-navigation__list h3 {
+    margin-bottom: 0; }
+
+/* line 44, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+.sub-navigation__platform ul {
+  *zoom: 1; }
+  /* line 38, node_modules/compass-mixins/lib/compass/utilities/general/_clearfix.scss */
+  .sub-navigation__platform ul:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 47, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+.sub-navigation__item {
+  float: left;
+  width: 50%;
+  list-style-type: none; }
+  /* line 52, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+  .sub-navigation__item a {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    display: block;
+    transition: opacity 0.5s ease;
+    padding: 0 20px 0 40px;
+    line-height: 80px;
+    text-decoration: none;
+    color: black; }
+    /* line 62, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+    .sub-navigation__item a:hover, .sub-navigation__item a.active {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+      opacity: 1;
+      border-bottom: 2px solid black; }
+  /* line 67, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+  .sub-navigation__item.sub-navigation__item--html5 a {
+    background: url("/assets/images/documentation/html5-d340840d.png") no-repeat left;
+    margin-right: 5px; }
+  /* line 71, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_sub_navigation.sass */
+  .sub-navigation__item.sub-navigation__item--ios a {
+    background: url("/assets/images/documentation/ios-ded73f08.png") no-repeat left;
+    margin-left: 5px; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+.footer {
+  border-top: 1px solid #D8D8D8;
+  padding: 0 0 20px;
+  background-color: #f0f2f5;
+  color: #999999; }
+  /* line 7, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+  .footer ul {
+    margin-top: 20px;
+    text-align: center; }
+    /* line 11, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+    .footer ul li {
+      display: inline-block;
+      width: 100%;
+      padding: 5px 15px 10px;
+      font-size: 1.3rem; }
+      /* line 17, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+      .footer ul li a {
+        color: #999999; }
+    @media all and (min-width: 600px) {
+      /* line 21, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+      .footer ul li {
+        width: auto; } }
+  /* line 24, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+  .footer p {
+    text-align: center; }
+  /* line 28, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+  .footer .container a, .footer .header__container a,
+  .footer .container p,
+  .footer .header__container p {
+    font-size: 1.3rem; }
+
+/* line 32, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+.footer-container {
+  max-width: 1010px;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 12, /home/photoeditorsdk/production/releases/20151130162841/node_modules/susy/sass/susy/output/support/_clearfix.scss */
+  .footer-container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 35, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+.footer-container__item {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  padding: 30px 20px 27px 20px;
+  text-align: center; }
+  /* line 40, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+  .footer-container__item h4 {
+    padding-top: 60px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 50px; }
+  /* line 47, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+  .footer-container__item p {
+    margin-bottom: 5px;
+    line-height: 1.5; }
+  /* line 51, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+  .footer-container__item:hover {
+    background: #EAEAEA; }
+  @media all and (max-width: 599px) {
+    /* line 35, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+    .footer-container__item {
+      border-bottom: 1px solid #D8D8D8; } }
+  @media all and (min-width: 600px) {
+    /* line 35, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+    .footer-container__item {
+      width: 32.20339%;
+      float: left;
+      margin-right: 1.69492%; }
+      /* line 59, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+      .footer-container__item:nth-of-type(3) {
+        margin-right: 0; } }
+
+/* line 63, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+.footer-container--get-started h4 {
+  background-image: url("/assets/images/get-started-84d9df90.png"); }
+
+/* line 67, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+.footer-container--open-editor h4 {
+  background-image: url("/assets/images/open-editor-f424f0db.png"); }
+
+/* line 71, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_footer.sass */
+.footer-container--get-license h4 {
+  background-image: url("/assets/images/get-license-01234f80.png"); }
+
+/* line 3, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_topbar.sass */
+.topbar__container {
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 16px; }
+  /* line 12, /home/photoeditorsdk/production/releases/20151130162841/node_modules/susy/sass/susy/output/support/_clearfix.scss */
+  .topbar__container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 7, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_topbar.sass */
+.topbar--sticky {
+  background: rgba(255, 255, 255, 0.9); }
+
+@media all and (min-width: 580px) {
+  /* line 11, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_topbar.sass */
+  .topbar {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    transition: all 0.1s ease-out;
+    width: 100%; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+.features {
+  color: #48525B; }
+  /* line 4, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+  .features h2 {
+    margin-bottom: 55px;
+    text-align: center; }
+
+/* line 9, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+.feature-list {
+  *zoom: 1; }
+  /* line 38, node_modules/compass-mixins/lib/compass/utilities/general/_clearfix.scss */
+  .feature-list:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 12, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+.feature-list__item {
+  padding: 5.26316% 0; }
+  /* line 15, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+  .feature-list__item img {
+    float: left;
+    opacity: 0.8;
+    margin: 0px 20px 0 0;
+    width: 40px; }
+  /* line 21, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+  .feature-list__item h4 {
+    margin-bottom: 6px;
+    font-family: "Roboto", "sans-serif";
+    color: #48525B; }
+  /* line 26, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+  .feature-list__item p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300; }
+
+@media all and (min-width: 500px) {
+  /* line 32, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+  .feature-list__item {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%; }
+    /* line 34, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+    .feature-list__item:nth-of-type(even) {
+      margin-right: 0; } }
+
+@media all and (min-width: 760px) {
+  /* line 38, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+  .feature-list__item {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%; }
+    /* line 40, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_features.sass */
+    .feature-list__item:last-child {
+      margin-right: 0; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_customers.sass */
+.customers {
+  padding: 80px 0;
+  background-color: #F9F9F9; }
+  /* line 5, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_customers.sass */
+  .customers h2 {
+    margin-bottom: 10px;
+    color: #48525B; }
+  /* line 10, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_customers.sass */
+  .customers h3 {
+    color: #5A5A5A; }
+  /* line 14, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_customers.sass */
+  .customers .container, .customers .header__container {
+    text-align: center; }
+  /* line 17, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_customers.sass */
+  .customers .customers-list {
+    padding: 40px 0;
+    list-style: none;
+    text-align: center; }
+    /* line 22, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_customers.sass */
+    .customers .customers-list .customers-list__item {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+      opacity: 0.5;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out false;
+      -o-transition: all 0.3s ease-out false;
+      transition: all 0.3s ease-out;
+      display: inline-block;
+      margin: 15px 30px; }
+      /* line 28, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_customers.sass */
+      .customers .customers-list .customers-list__item:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+        opacity: 0.8; }
+
+/* line 2, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_html5_editor.sass */
+.html5-editor .container, .html5-editor .header__container {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background: url("/assets/images/editor-background-dff0b9a6.png") no-repeat center center;
+  color: #48525B; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_ios_editor.sass */
+.ios-editor {
+  background-color: #F9F9F9; }
+  /* line 4, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_ios_editor.sass */
+  .ios-editor .container, .ios-editor .header__container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: #48525B; }
+  /* line 9, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_ios_editor.sass */
+  .ios-editor li {
+    list-style: none; }
+
+/* line 2, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+.controller-license .disclaimer {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 24px; }
+
+/* line 7, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+.license {
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  margin-top: 40px;
+  max-width: 644px; }
+  /* line 13, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  .license .license-header {
+    -moz-border-radius-topleft: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 60px;
+    padding: 20px 30px;
+    background: rgba(75, 121, 222, 0.8);
+    color: white; }
+    /* line 20, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+    .license .license-header .license-header__text {
+      font-size: 22px;
+      line-height: 24px; }
+
+/* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+.license-body {
+  -webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.24);
+  position: relative;
+  z-index: 2;
+  height: 220px;
+  padding: 20px 30px;
+  background: white; }
+  /* line 33, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  .license-body.license-body--large {
+    -moz-border-radius-bottomleft: 4px;
+
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 300px; }
+  /* line 37, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  .license-body .license-features {
+    width: 50%;
+    list-style: none; }
+    /* line 41, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+    .license-body .license-features.license-features--left {
+      float: left; }
+      /* line 43, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+      .license-body .license-features.license-features--left li {
+        border-right: 1px solid #D8D8D8; }
+    /* line 46, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+    .license-body .license-features.license-features--right {
+      float: right; }
+      /* line 48, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+      .license-body .license-features.license-features--right li {
+        padding-left: 15px; }
+    /* line 51, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+    .license-body .license-features li {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      border-bottom: 1px solid #D8D8D8;
+      height: 58px;
+      line-height: 58px;
+      text-align: left;
+      white-space: nowrap;
+      color: #48525B; }
+      /* line 62, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+      .license-body .license-features li:last-child {
+        border-bottom-width: 0; }
+      /* line 66, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+      .license-body .license-features li span:before {
+        float: left;
+        margin: 21px 12px 0 0;
+        width: 18px;
+        height: 18px;
+        background: url("/assets/images/license/tick-3d161993.png") center no-repeat;
+        background-size: 100%;
+        content: ""; }
+
+/* line 75, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+.license-footer {
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 80px;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.9); }
+  /* line 81, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  .license-footer .price {
+    float: left;
+    font-size: 42px;
+    line-height: 55px;
+    color: black; }
+  /* line 88, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  .license-footer .license-footer--notice {
+    float: left;
+    line-height: 80px;
+    color: rgba(72, 82, 91, 0.5); }
+  /* line 94, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  .license-footer .license-footer--button {
+    padding-top: 20px; }
+
+@media only screen and (max-width: 650px) {
+  /* line 99, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  html.controller-license .header-content {
+    padding-top: 135px; } }
+
+@media only screen and (max-width: 560px) {
+  /* line 105, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  html.controller-license .license-body {
+    height: auto;
+    padding: 0; }
+    /* line 109, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+    html.controller-license .license-body .license-features {
+      width: 100%; }
+      /* line 112, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+      html.controller-license .license-body .license-features.license-features--left {
+        float: none; }
+        /* line 115, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+        html.controller-license .license-body .license-features.license-features--left li {
+          border-right: none;
+          border-left: none; }
+          /* line 121, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+          html.controller-license .license-body .license-features.license-features--left li:last-child {
+            border-bottom-width: 1px; }
+      /* line 124, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+      html.controller-license .license-body .license-features.license-features--right {
+        float: none; }
+      /* line 129, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+      html.controller-license .license-body .license-features.license-features--left li, html.controller-license .license-body .license-features.license-features--right li {
+        padding-right: 25%;
+        padding-left: 25%; } }
+
+@media only screen and (max-width: 430px) {
+  /* line 139, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_get_license.sass */
+  html.controller-license .license-body .license-features.license-features--left li, html.controller-license .license-body .license-features.license-features--right li {
+    padding-right: 10%;
+    padding-left: 10%; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+.columns {
+  *zoom: 1;
+  padding: 18px 20px; }
+  /* line 38, node_modules/compass-mixins/lib/compass/utilities/general/_clearfix.scss */
+  .columns:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media all and (max-width: 560px) {
+    /* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+    .columns {
+      float: none; } }
+
+/* line 8, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+.columns--total {
+  border-top: 1px solid #E2E2E2;
+  background: #F9F9F9;
+  text-align: left; }
+  /* line 13, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+  .columns--total .column {
+    border-right: none; }
+  @media all and (max-width: 560px) {
+    /* line 17, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+    .columns--total .column {
+      text-align: center; } }
+
+/* line 20, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+.column {
+  float: left;
+  border-right: 1px solid #DDDDDD;
+  width: 50%;
+  padding-right: 2rem;
+  text-align: left; }
+  /* line 27, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+  .column:last-child {
+    border-right: none;
+    padding-right: 0;
+    padding-left: 2em; }
+  @media all and (max-width: 560px) {
+    /* line 20, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+    .column {
+      margin-right: 0;
+      margin-bottom: 15px;
+      border-right: none;
+      width: 100%;
+      padding-right: 0; }
+      /* line 39, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_subscription.sass */
+      .column:last-child {
+        padding-left: 0; } }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_testimonial.sass */
+.testimonial {
+  padding: 16% 0 12%;
+  background: url("/assets/images/background-fa286c0c.jpg") no-repeat center 60%;
+  background-size: cover;
+  font-style: italic;
+  color: #FFFFFF; }
+  /* line 8, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_testimonial.sass */
+  .testimonial .container, .testimonial .header__container {
+    display: table; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_documentation.sass */
+.documentation {
+  padding: 20px 0 60px 0; }
+  /* line 5, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_documentation.sass */
+  .documentation p {
+    font-weight: normal; }
+  /* line 8, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_documentation.sass */
+  .documentation li {
+    font-weight: 400; }
+  @media all and (min-width: 550px) {
+    /* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_documentation.sass */
+    .documentation {
+      width: 66.10169%;
+      float: right;
+      margin-right: 0; } }
+  @media all and (min-width: 800px) {
+    /* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_documentation.sass */
+    .documentation {
+      width: 74.57627%;
+      float: right;
+      margin-right: 0; } }
+
+/* line 17, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_documentation.sass */
+.documentation__disclaimer {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 5px 20px 25px 20px;
+  background: #093861;
+  font-weight: bold;
+  color: white; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_login.sass */
+.login {
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 115px; }
+  /* line 6, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_login.sass */
+  .login form {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    padding: 25px;
+    background: #F9F9F9; }
+    /* line 12, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_login.sass */
+    .login form label {
+      color: #8B8B8B; }
+    /* line 15, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_login.sass */
+    .login form input {
+      width: 100%; }
+
+/* line 2, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_dashboard.sass */
+.dashboard table {
+  width: 100%; }
+  /* line 6, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_dashboard.sass */
+  .dashboard table thead tr {
+    background-color: #fcfcfc; }
+    /* line 10, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_dashboard.sass */
+    .dashboard table thead tr td p {
+      font-weight: bold; }
+  /* line 14, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_dashboard.sass */
+  .dashboard table tbody tr:nth-child(even) {
+    background-color: #f7f7f7; }
+  /* line 18, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_dashboard.sass */
+  .dashboard table tbody tr:nth-child(odd) {
+    background-color: #d7d7d7; }
+  /* line 21, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_dashboard.sass */
+  .dashboard table td,
+  .dashboard table th {
+    padding: 10px;
+    font-weight: 300;
+    text-align: left; }
+  /* line 27, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_dashboard.sass */
+  .dashboard table p {
+    margin: 0;
+    padding: 0 !important; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_proposal.sass */
+.form {
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  background: #FFFFFF; }
+  /* line 8, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_proposal.sass */
+  .form ul {
+    list-style: none; }
+    /* line 11, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_proposal.sass */
+    .form ul li {
+      text-align: left; }
+
+/* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+#contact {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: none;
+  overflow-y: scroll;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 320px;
+  max-width: 500px;
+  height: 100%;
+  padding-bottom: 2rem;
+  background: white;
+  background-color: #F9F9F9;
+  text-align: center;
+  color: #48525A; }
+  @media only screen and (min-width: 750px) {
+    /* line 1, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+    #contact {
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      right: auto;
+      overflow: hidden;
+      border-radius: 5px;
+      height: auto; } }
+  /* line 29, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+  #contact h4 {
+    margin-bottom: 2rem;
+    background-color: white;
+    font-size: 1.8rem;
+    line-height: 8rem; }
+    @media all and (min-width: 600px) {
+      /* line 29, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+      #contact h4 {
+        width: 100%;
+        font-size: 2.2rem; } }
+  /* line 39, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+  #contact input, #contact textarea {
+    margin-bottom: 10px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 17px; }
+  /* line 49, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+  #contact textarea {
+    min-height: 160px;
+    padding-top: 9px;
+    resize: none; }
+  /* line 54, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+  #contact small {
+    display: block;
+    opacity: 0.5;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 17px; }
+
+/* line 62, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+.contact__thanks {
+  margin: 20px;
+  margin-top: 100px; }
+
+/* line 66, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/layout/_contact.sass */
+.contact__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer; }
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format("woff"); }
+
+/* line 6, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word; }
+
+/* line 17, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body a {
+  background: transparent; }
+
+/* line 21, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0; }
+
+/* line 26, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body strong {
+  font-weight: bold; }
+
+/* line 30, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1 {
+  font-size: 2em;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  margin: 0.67em 0; }
+
+/* line 37, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body img {
+  border: 0; }
+
+/* line 41, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 46, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body pre {
+  overflow: auto; }
+
+/* line 50, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* line 57, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/* line 63, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body html input[disabled] {
+  cursor: default; }
+
+/* line 67, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body input {
+  line-height: normal; }
+
+/* line 71, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 76, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 81, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body td,
+.markdown-body th {
+  padding: 0; }
+
+/* line 86, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body * {
+  box-sizing: border-box; }
+
+/* line 90, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body input {
+  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+/* line 94, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none; }
+
+/* line 99, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline; }
+
+/* line 104, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd; }
+
+/* line 113, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body hr:before {
+  display: table;
+  content: ""; }
+
+/* line 118, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: ""; }
+
+/* line 124, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1; }
+
+/* line 135, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1 {
+  font-size: 30px; }
+
+/* line 139, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h2 {
+  font-size: 21px; }
+
+/* line 143, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h3 {
+  font-size: 16px; }
+
+/* line 147, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h4 {
+  font-size: 14px; }
+
+/* line 151, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h5 {
+  font-size: 12px; }
+
+/* line 155, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h6 {
+  font-size: 11px; }
+
+/* line 159, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body blockquote {
+  margin: 0; }
+
+/* line 163, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* line 170, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman; }
+
+/* line 175, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha; }
+
+/* line 182, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body dd {
+  margin-left: 0; }
+
+/* line 186, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px; }
+
+/* line 191, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+
+/* line 197, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 210, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .octicon-link:before {
+  content: '\f05c'; }
+
+/* line 214, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body > *:first-child {
+  margin-top: 0 !important; }
+
+/* line 218, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body > *:last-child {
+  margin-bottom: 0 !important; }
+
+/* line 222, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body a:not(:link):not(:visited) {
+  color: inherit;
+  text-decoration: none; }
+
+/* line 227, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px; }
+
+/* line 237, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .anchor:focus {
+  outline: none; }
+
+/* line 241, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4; }
+
+/* line 254, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle; }
+
+/* line 265, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  padding-left: 8px;
+  margin-left: -30px;
+  text-decoration: none; }
+
+/* line 276, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block; }
+
+/* line 285, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee; }
+
+/* line 292, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h1 .anchor {
+  line-height: 1; }
+
+/* line 296, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee; }
+
+/* line 303, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h2 .anchor {
+  line-height: 1; }
+
+/* line 307, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43; }
+
+/* line 312, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h3 .anchor {
+  line-height: 1.2; }
+
+/* line 316, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h4 {
+  font-size: 1.25em; }
+
+/* line 320, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h4 .anchor {
+  line-height: 1.2; }
+
+/* line 324, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h5 {
+  font-size: 1em; }
+
+/* line 328, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h5 .anchor {
+  line-height: 1.1; }
+
+/* line 332, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777; }
+
+/* line 337, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body h6 .anchor {
+  line-height: 1.1; }
+
+/* line 341, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px; }
+
+/* line 352, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none; }
+
+/* line 360, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em; }
+
+/* line 365, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* line 373, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body li > p {
+  margin-top: 16px; }
+
+/* line 377, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body dl {
+  padding: 0; }
+
+/* line 381, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold; }
+
+/* line 389, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px; }
+
+/* line 394, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd; }
+
+/* line 400, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body blockquote > :first-child {
+  margin-top: 0; }
+
+/* line 404, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body blockquote > :last-child {
+  margin-bottom: 0; }
+
+/* line 408, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all; }
+
+/* line 416, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body table th {
+  font-weight: bold; }
+
+/* line 420, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd; }
+
+/* line 426, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc; }
+
+/* line 431, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8; }
+
+/* line 435, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: border-box; }
+
+/* line 440, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px; }
+
+/* line 450, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0"; }
+
+/* line 456, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0; }
+
+/* line 466, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .highlight {
+  margin-bottom: 16px; }
+
+/* line 470, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px; }
+
+/* line 480, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal; }
+
+/* line 485, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body pre {
+  word-wrap: normal; }
+
+/* line 489, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0; }
+
+/* line 501, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal; }
+
+/* line 506, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb; }
+
+/* line 520, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-c {
+  color: #969896; }
+
+/* line 524, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-c1,
+.markdown-body .pl-mdh,
+.markdown-body .pl-mm,
+.markdown-body .pl-mp,
+.markdown-body .pl-mr,
+.markdown-body .pl-s1 .pl-v,
+.markdown-body .pl-s3,
+.markdown-body .pl-sc,
+.markdown-body .pl-sv {
+  color: #0086b3; }
+
+/* line 536, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3; }
+
+/* line 541, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-s1 .pl-s2,
+.markdown-body .pl-smi,
+.markdown-body .pl-smp,
+.markdown-body .pl-stj,
+.markdown-body .pl-vo,
+.markdown-body .pl-vpf {
+  color: #333; }
+
+/* line 550, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-ent {
+  color: #63a35c; }
+
+/* line 554, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-k,
+.markdown-body .pl-s,
+.markdown-body .pl-st {
+  color: #a71d5d; }
+
+/* line 560, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-pds,
+.markdown-body .pl-s1,
+.markdown-body .pl-s1 .pl-pse .pl-s2,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-src {
+  color: #183691; }
+
+/* line 571, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-v {
+  color: #ed6a43; }
+
+/* line 575, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-id {
+  color: #b52a1d; }
+
+/* line 579, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8; }
+
+/* line 584, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold; }
+
+/* line 589, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-ml {
+  color: #693a17; }
+
+/* line 593, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold; }
+
+/* line 600, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-mq {
+  color: #008080; }
+
+/* line 604, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic; }
+
+/* line 609, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold; }
+
+/* line 614, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-md,
+.markdown-body .pl-mdhf {
+  background-color: #ffecec;
+  color: #bd2c00; }
+
+/* line 620, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-mdht,
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532; }
+
+/* line 626, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold; }
+
+/* line 631, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .pl-mo {
+  color: #1d3e81; }
+
+/* line 635, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb; }
+
+/* line 649, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .task-list-item {
+  list-style-type: none; }
+
+/* line 653, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .task-list-item + .task-list-item {
+  margin-top: 3px; }
+
+/* line 657, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle; }
+
+/* line 662, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/github-markdown.css */
+.markdown-body :checked + .radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4183c4; }
+
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+/* line 7, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  -webkit-text-size-adjust: none; }
+
+/* line 16, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic; }
+
+/* line 23, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold; }
+
+/* line 34, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #008080; }
+
+/* line 40, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.tex .hljs-formula {
+  color: #d14; }
+
+/* line 48, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold; }
+
+/* line 55, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-list .hljs-keyword,
+.hljs-subst {
+  font-weight: normal; }
+
+/* line 60, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold; }
+
+/* line 68, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal; }
+
+/* line 76, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080; }
+
+/* line 82, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-regexp {
+  color: #009926; }
+
+/* line 86, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.clojure .hljs-keyword,
+.scheme .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073; }
+
+/* line 96, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-built_in {
+  color: #0086b3; }
+
+/* line 100, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold; }
+
+/* line 110, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-deletion {
+  background: #fdd; }
+
+/* line 114, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-addition {
+  background: #dfd; }
+
+/* line 118, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.diff .hljs-change {
+  background: #0086b3; }
+
+/* line 122, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/highlightjs-github.css */
+.hljs-chunk {
+  color: #aaa; }
+
+/*!
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 25, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1E1E1E;
+  overflow: hidden;
+  text-align: left; }
+
+/* line 38, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit div, .imglykit span, .imglykit applet, .imglykit object, .imglykit iframe,
+.imglykit h1, .imglykit h2, .imglykit h3, .imglykit h4, .imglykit h5, .imglykit h6, .imglykit p, .imglykit blockquote, .imglykit pre,
+.imglykit a, .imglykit abbr, .imglykit acronym, .imglykit address, .imglykit big, .imglykit cite, .imglykit code,
+.imglykit del, .imglykit dfn, .imglykit em, .imglykit img, .imglykit ins, .imglykit kbd, .imglykit q, .imglykit s, .imglykit samp,
+.imglykit small, .imglykit strike, .imglykit strong, .imglykit sub, .imglykit sup, .imglykit tt, .imglykit var,
+.imglykit b, .imglykit u, .imglykit i, .imglykit center,
+.imglykit dl, .imglykit dt, .imglykit dd, .imglykit ol, .imglykit ul, .imglykit li,
+.imglykit fieldset, .imglykit form, .imglykit label, .imglykit legend,
+.imglykit table, .imglykit caption, .imglykit tbody, .imglykit tfoot, .imglykit thead, .imglykit tr, .imglykit th, .imglykit td,
+.imglykit article, .imglykit aside, .imglykit canvas, .imglykit details, .imglykit embed,
+.imglykit figure, .imglykit figcaption, .imglykit footer, .imglykit header, .imglykit hgroup,
+.imglykit menu, .imglykit nav, .imglykit output, .imglykit ruby, .imglykit section, .imglykit summary,
+.imglykit time, .imglykit mark, .imglykit audio, .imglykit video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 57, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 60, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit caption, .imglykit th, .imglykit td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 64, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit q, .imglykit blockquote {
+  quotes: none; }
+
+/* line 66, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit q:before, .imglykit q:after, .imglykit blockquote:before, .imglykit blockquote:after {
+  content: "";
+  content: none; }
+
+/* line 69, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit a img {
+  border: none; }
+
+/* line 71, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit * {
+  box-sizing: border-box; }
+
+/* line 74, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-float-left {
+  float: left; }
+
+/* line 77, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-float-right {
+  float: right; }
+
+/* line 80, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: table;
+  width: 100%;
+  height: 100%;
+  table-layout: fixed; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 97, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-container-row {
+  display: table-row; }
+
+/* line 100, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-container {
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: table-cell;
+  overflow: hidden; }
+
+/* line 110, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-inner-container {
+  position: absolute; }
+
+/* line 112, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-inner-container canvas {
+  cursor: move; }
+
+/* line 114, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-inner-container .imglykit-canvas-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 120, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-inner-container .imglykit-canvas-controls.imglykit-canvas-controls-disabled {
+  display: none; }
+
+/* line 123, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-webcam-video {
+  width: 100px;
+  height: 100px; }
+
+/* line 127, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-webcam-button {
+  -webkit-border-radius: 26.5px;
+  -moz-border-radius: 26.5px;
+  -ms-border-radius: 26.5px;
+  -o-border-radius: 26.5px;
+  border-radius: 26.5px;
+  margin: 15px auto 0 !important;
+  width: 110px;
+  height: 53px;
+  padding-top: 7px !important;
+  background: #43ADEB;
+  cursor: pointer; }
+
+/* line 139, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-webcam-button img {
+  margin: auto;
+  width: 39px !important;
+  height: 39px !important; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 152, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  table-layout: fixed; }
+
+/* line 158, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container.imglykit-header-padding {
+  padding-top: 100px; }
+
+/* line 160, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-cell {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: table-cell; }
+
+/* line 167, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  background: #43ADEB;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 38px;
+  font-weight: bold;
+  color: white; }
+
+/* line 182, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-or {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 30px; }
+
+/* line 187, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-or-line {
+  position: relative;
+  display: table-cell; }
+
+/* line 190, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-or-line:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 1px;
+  content: ''; }
+
+/* line 199, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-or-word {
+  display: table-cell;
+  vertical-align: middle;
+  width: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2); }
+
+/* line 206, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-row, .imglykit-container .imglykit-splash-container .imglykit-splash-cell {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle; }
+
+/* line 210, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-splash-cell, .imglykit-container .imglykit-splash-container .imglykit-splash-cell .imglykit-splash-cell {
+  padding: 10px; }
+
+/* line 212, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-row {
+  display: table-row;
+  cursor: pointer; }
+
+/* line 215, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+
+.imglykit-container .imglykit-splash-container .imglykit-splash-row--upload, .imglykit-container .imglykit-splash-container .imglykit-splash-row--camera {
+  height: 45%; }
+
+/* line 217, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-splash-content {
+  margin: auto;
+  margin-top: 10px;
+  width: 250px;
+  font-family: Helvetica, Arial, Verdana; }
+
+/* line 222, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-splash-content h1 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white; }
+
+/* line 227, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-splash-content .imglykit-splash-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.2); }
+
+/* line 230, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-upload-hidden-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 246, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-header-row {
+  display: table-row;
+  height: 30px; }
+
+/* line 250, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-header {
+  display: table-cell;
+  background: #1A1A1A;
+  text-align: center;
+  color: white;
+  font: bold 11px Helvetica, Arial, sans-serif;
+  line-height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 2; }
+
+/* line 263, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-header .imglykit-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  margin-right: 10px; }
+
+/* line 269, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-header .imglykit-close-button img {
+  vertical-align: middle; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 280, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-row {
+  display: table-row; }
+
+/* line 283, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  display: table-cell;
+  width: 100%;
+  height: 40px;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding: 0 20px;
+  z-index: 2;
+  background: #2B2B2B; }
+
+/* line 296, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls > * * {
+  display: inline-block; }
+
+/* line 298, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls, .imglykit-container .imglykit-top-controls * {
+  line-height: 30px; }
+
+/* line 300, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls.imglykit-header-padding {
+  top: 30px; }
+
+/* line 303, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-left, .imglykit-container .imglykit-top-controls-right {
+  padding-top: 5px; }
+
+/* line 306, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-left {
+  float: left; }
+
+/* line 309, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-right {
+  float: right;
+  display: none; }
+
+/* line 312, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-right .imglykit-zoom-in, .imglykit-container .imglykit-top-controls-right .imglykit-zoom-out {
+  padding: 0 15px;
+  cursor: pointer;
+  border-left: 1px solid #363636; }
+
+/* line 316, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-right .imglykit-zoom-in img, .imglykit-container .imglykit-top-controls-right .imglykit-zoom-out img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+  vertical-align: middle; }
+
+/* line 320, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-right .imglykit-zoom-in:hover img, .imglykit-container .imglykit-top-controls-right .imglykit-zoom-out:hover img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+/* line 323, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-right .imglykit-zoom-out {
+  padding-right: 0; }
+
+/* line 325, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-top-controls-right .imglykit-zoom-level {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+  padding: 0 10px; }
+
+/* line 330, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-undo {
+  cursor: pointer;
+  border-right: 1px solid #363636;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 10px;
+  display: none; }
+
+/* line 336, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-undo img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+  margin-right: 5px;
+  vertical-align: middle; }
+
+/* line 342, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-export {
+  cursor: pointer;
+  border-right: 1px solid #363636;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 10px;
+  display: none; }
+
+/* line 348, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-export img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+  margin-right: 5px;
+  vertical-align: middle; }
+
+/* line 354, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-new {
+  cursor: pointer;
+  border-right: 1px solid #363636;
+  color: rgba(255, 255, 255, 0.4);
+  padding-right: 10px; }
+
+/* line 359, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-new img {
+  margin-right: 5px;
+  vertical-align: middle; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 379, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-knob {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 400, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-crosshair {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  float: left; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 414, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-transparent-knob {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  margin-top: -10px;
+  margin-left: -10px;
+  cursor: pointer; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 439, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-loadingOverlay {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.9); }
+
+/* line 449, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-loadingOverlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -75px;
+  border-radius: 5px;
+  width: 150px;
+  height: 70px;
+  padding: 10px;
+  background: #1E1E1E; }
+
+/* line 460, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-loadingOverlay-content img {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px; }
+
+/* line 464, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-loadingOverlay-content span {
+  display: block;
+  font: bold 11px Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: white; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 478, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-flashOverlay {
+  -webkit-box-shadow: 0 2px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 2px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 2px rgba(255, 255, 255, 0.5) inset;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  display: none;
+  border-radius: 5px;
+  max-width: 90%;
+  padding: 20px;
+  background: rgba(43, 43, 43, 0.9); }
+
+/* line 496, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-flashOverlay-headline, .imglykit .imglykit-flashOverlay-text {
+  display: block;
+  font: bold 15px Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: white; }
+
+/* line 501, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-flashOverlay-headline {
+  margin-bottom: 0.5em; }
+
+/* line 503, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-flashOverlay-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer; }
+
+/* line 508, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-flashOverlay-text {
+  font: normal 13px Helvetica, Arial, sans-serif; }
+
+/* line 510, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-flashOverlay--error {
+  -webkit-box-shadow: 0 2px #FF3E3E inset;
+  -moz-box-shadow: 0 2px #FF3E3E inset;
+  box-shadow: 0 2px #FF3E3E inset; }
+
+/* line 514, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit .imglykit-flashOverlay--warning {
+  -webkit-box-shadow: 0 2px #FFBF3E inset;
+  -moz-box-shadow: 0 2px #FFBF3E inset;
+  box-shadow: 0 2px #FFBF3E inset; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 527, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls-row {
+  display: table-row; }
+
+/* line 530, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  display: table-cell;
+  width: 100%;
+  height: 80px;
+  background: #2B2B2B; }
+
+/* line 539, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls {
+  width: 100%;
+  text-align: center;
+  height: 80px; }
+
+/* line 543, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls > div:not(.imglykit-scrollbar-background) > * {
+  width: 100%;
+  display: table;
+  table-layout: fixed; }
+
+/* line 547, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls > div:not(.imglykit-scrollbar-background) > * > * {
+  display: table-cell;
+  vertical-align: top; }
+
+/* line 550, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-list-container {
+  overflow: hidden;
+  height: 80px; }
+
+/* line 553, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-list {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  height: 80px;
+  font-size: 0; }
+
+/* line 562, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-list-overflow {
+  overflow: visible; }
+
+/* line 564, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li {
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out false;
+  -o-transition: background-color 0.2s ease-out false;
+  transition: background-color 0.2s ease-out;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  line-height: 80px;
+  border-left: 1px solid #363636; }
+
+/* line 577, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li:last-child {
+  border-right: 1px solid #363636; }
+
+/* line 579, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li.imglykit-controls-item--with-label:hover img {
+  margin-bottom: 20px; }
+
+/* line 581, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li img {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out false;
+  -o-transition: all 0.2s ease-out false;
+  transition: all 0.2s ease-out;
+  width: 40px;
+  vertical-align: middle; }
+
+/* line 588, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li.imglykit-controls-item-active {
+  background: rgba(0, 0, 0, 0.3); }
+
+/* line 590, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li .imglykit-controls-label {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out false;
+  -o-transition: all 0.2s ease-out false;
+  transition: all 0.2s ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  color: white;
+  font: bold 10px Helvetica, Arial, sans-serif;
+  text-align: center; }
+
+/* line 603, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li:hover .imglykit-controls-label {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  bottom: 13px; }
+
+/* line 607, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-item-label {
+  color: white;
+  font-size: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 10px; }
+
+/* line 613, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-icon {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 0; }
+
+/* line 618, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-icon img {
+  vertical-align: middle; }
+
+/* line 620, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-item-canvas {
+  display: inline-block;
+  width: 42px;
+  height: 50px;
+  vertical-align: middle; }
+
+/* line 625, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li[data-disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2; }
+
+/* line 628, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li:hover:not([data-disabled]), .imglykit-container .imglykit-controls .imglykit-controls-button:hover:not([data-disabled]) {
+  -webkit-box-shadow: 0 -3px 0 0 #43ADEB inset;
+  -moz-box-shadow: 0 -3px 0 0 #43ADEB inset;
+  box-shadow: 0 -3px 0 0 #43ADEB inset;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+/* line 633, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls li:hover:not([data-disabled]) img, .imglykit-container .imglykit-controls .imglykit-controls-button:hover:not([data-disabled]) img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1); }
+
+/* line 639, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-button {
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out false;
+  -o-transition: background-color 0.2s ease-out false;
+  transition: background-color 0.2s ease-out;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 0;
+  cursor: pointer;
+  position: relative; }
+
+/* line 650, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-button:first-child {
+  border-right: 1px solid #363636; }
+
+/* line 652, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-button:last-child {
+  border-left: 1px solid #363636; }
+
+/* line 654, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-button img {
+  vertical-align: middle;
+  width: 40px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out false;
+  -o-transition: all 0.2s ease-out false;
+  transition: all 0.2s ease-out; }
+
+/* line 661, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-done .imglykit-controls-done-highlighted {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  line-height: 80px; }
+
+/* line 669, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-done.highlighted > img {
+  display: none; }
+
+/* line 671, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls .imglykit-controls-done.highlighted .imglykit-controls-done-highlighted {
+  display: block; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 682, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls-overview ul.imglykit-controls-list {
+  display: block; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 693, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls-filters ul.imglykit-controls-list li {
+  line-height: normal; }
+
+/* line 695, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls-filters ul.imglykit-controls-list li img {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 708, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls-stickers ul.imglykit-controls-list li {
+  background-size: 42px;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 721, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-stickers-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 728, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-stickers-container .imglykit-canvas-stickers {
+  position: relative;
+  display: inline-block;
+  cursor: move; }
+
+/* line 732, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-stickers-container .imglykit-canvas-stickers .imglykit-knob {
+  bottom: 0;
+  right: 0; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 744, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-controls-text ul.imglykit-controls-list li {
+  color: white;
+  font-size: 32px;
+  line-height: 80px; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 757, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 763, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-text-container .imglykit-canvas-text {
+  position: relative;
+  display: inline-block; }
+
+/* line 766, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-text-container .imglykit-canvas-text .imglykit-crosshair {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  margin-top: -17px;
+  margin-left: -17px;
+  width: 34px;
+  height: 34px; }
+
+/* line 775, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-text-container .imglykit-canvas-text .imglykit-canvas-text-textarea {
+  position: relative;
+  display: inline-block; }
+
+/* line 778, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-text-container .imglykit-canvas-text .imglykit-canvas-text-textarea textarea {
+  border: 2px solid white;
+  background: transparent;
+  resize: none;
+  padding: 0; }
+
+/* line 783, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-text-container .imglykit-canvas-text .imglykit-canvas-text-textarea .imglykit-knob {
+  bottom: -2px;
+  right: -8px; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 795, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 80px;
+  line-height: 80px; }
+
+/* line 801, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider > * {
+  display: table-cell; }
+
+/* line 803, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider .imglykit-slider-content {
+  position: absolute;
+  top: 38px;
+  width: 100%; }
+
+/* line 807, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider .imglykit-slider-minus, .imglykit-container .imglykit-slider .imglykit-slider-plus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
+  color: white;
+  font-size: 12px;
+  width: 40px;
+  text-align: center; }
+
+/* line 814, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider .imglykit-slider-slider {
+  width: auto;
+  position: relative;
+  z-index: 1; }
+
+/* line 818, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider .imglykit-slider-slider .imglykit-slider-background, .imglykit-container .imglykit-slider .imglykit-slider-slider .imglykit-slider-fill {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  background: #1A1A1A;
+  height: 12px;
+  top: 50%;
+  margin-top: -8px;
+  cursor: pointer; }
+
+/* line 829, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider .imglykit-slider-slider .imglykit-slider-fill {
+  position: absolute;
+  background: #43ADEB; }
+
+/* line 832, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider .imglykit-slider-slider .imglykit-slider-center-dot {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: #43ADEB;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  margin: -14px 0 0 -12px; }
+
+/* line 846, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-slider .imglykit-slider-slider .imglykit-slider-dot {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 30px;
+  height: 30px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -17px 0 0 -15px;
+  cursor: pointer; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 872, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker {
+  position: relative;
+  border-left: 1px solid #363636;
+  height: 80px; }
+
+/* line 876, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker .imglykit-color-picker-color {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: black;
+  margin-top: 15px; }
+
+/* line 884, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker .imglykit-controls-item-label {
+  position: absolute;
+  line-height: 11px;
+  width: 100%;
+  bottom: 10px;
+  left: 0; }
+
+/* line 890, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker .imglykit-transparent-knob {
+  pointer-events: none; }
+
+/* line 892, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker canvas {
+  cursor: pointer; }
+
+/* line 895, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay {
+  position: absolute;
+  cursor: default;
+  background: #353535;
+  width: 240px;
+  height: 240px;
+  padding: 20px;
+  z-index: 2;
+  bottom: 115px;
+  right: -80px;
+  position: absolute;
+  border-color: #353535;
+  display: none; }
+
+/* line 908, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-color: #353535;
+  top: 100%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -15px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #353535;
+  border-top-color: inherit; }
+
+/* line 922, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay.imglykit-visible {
+  display: block; }
+
+/* line 924, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay .imglykit-color-picker-alpha-container {
+  width: 200px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 10px; }
+
+/* line 929, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay .imglykit-color-picker-alpha-container canvas {
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/* line 934, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay .imglykit-color-picker-alpha-container .imglykit-transparent-knob {
+  top: 50%; }
+
+/* line 936, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay .imglykit-color-picker-hue-container {
+  width: 30px;
+  height: 160px;
+  position: relative;
+  float: left; }
+
+/* line 941, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay .imglykit-color-picker-hue-container canvas {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 946, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay .imglykit-color-picker-hue-container .imglykit-transparent-knob {
+  left: 50%; }
+
+/* line 948, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay .imglykit-color-picker-saturation-container {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  float: left;
+  margin-right: 10px; }
+
+/* line 954, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-color-picker-overlay .imglykit-color-picker-saturation-container canvas {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 968, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+  table-layout: fixed; }
+
+/* line 976, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container.imglykit-canvas-crop-container-hidden {
+  display: none; }
+
+/* line 978, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container > * {
+  display: table-row; }
+
+/* line 980, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container > * > * {
+  display: table-cell;
+  background: rgba(34, 34, 34, 0.9); }
+
+/* line 983, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container .imglykit-canvas-crop-center-center {
+  position: relative;
+  background: transparent;
+  cursor: move;
+  border: 1px solid white; }
+
+/* line 988, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container .imglykit-canvas-crop-center-center.imglykit-canvas-crop-center-center-nomove {
+  cursor: auto; }
+
+/* line 990, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container .imglykit-canvas-crop-knobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0); }
+
+/* line 997, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container .imglykit-canvas-crop-knobs > * {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer; }
+
+/* line 1009, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container .imglykit-canvas-crop-knobs [data-corner=top-left] {
+  top: -10px;
+  left: -10px; }
+
+/* line 1012, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container .imglykit-canvas-crop-knobs [data-corner=top-right] {
+  top: -10px;
+  right: -10px; }
+
+/* line 1015, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container .imglykit-canvas-crop-knobs [data-corner=bottom-left] {
+  bottom: -10px;
+  left: -10px; }
+
+/* line 1018, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-crop-container .imglykit-canvas-crop-knobs [data-corner=bottom-right] {
+  bottom: -10px;
+  right: -10px; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 1030, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-radial-blur-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 1036, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-radial-blur-container .imglykit-canvas-radial-blur-dot {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-left: -10px;
+  margin-top: -10px; }
+
+/* line 1050, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-radial-blur-container .imglykit-canvas-radial-blur-circle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden; }
+
+/* line 1058, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-radial-blur-container .imglykit-canvas-radial-blur-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  pointer-events: none; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 1080, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-tilt-shift-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 1086, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-tilt-shift-container .imglykit-canvas-tilt-shift-dot {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-left: -10px;
+  margin-top: -10px; }
+
+/* line 1100, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-tilt-shift-container .imglykit-canvas-tilt-shift-rect-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden; }
+
+/* line 1108, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-tilt-shift-container .imglykit-canvas-tilt-shift-rect {
+  border: 2px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  pointer-events: none; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 1125, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-canvas-brush-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: none;
+  background: rgba(255, 255, 255, 0); }
+
+/* line 1134, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+#imglykit-brush-cursor {
+  width: 200px;
+  height: 200px;
+  background: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: 1;
+  border: 2px solid white;
+  display: none; }
+
+/*
+ * Copyright (c) 2013-2015 9elements GmbH
+ *
+ * Released under Attribution-NonCommercial 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * For commercial use, please contact us at contact@9elements.com
+ */
+/* line 1154, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-scrollbar-background {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out false;
+  -o-transition: all 0.3s ease-out false;
+  transition: all 0.3s ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  width: 100%;
+  height: 11px;
+  background: #1E1E1E;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  cursor: pointer; }
+
+/* line 1168, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-scrollbar-background.visible {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+/* line 1172, /home/photoeditorsdk/production/releases/20151130162841/app/stylesheets/frontend/imglykit-night-ui.css */
+.imglykit-container .imglykit-scrollbar-button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: #43ADEB;
+  height: 7px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  margin: 2px;
+  cursor: pointer; }

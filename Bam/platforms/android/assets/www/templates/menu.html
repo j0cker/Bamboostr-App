@@ -1,0 +1,20 @@
+﻿<ion-nav-bar class="bar-positive" ng-class="{expanded: isExpanded, 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
+    <ion-nav-title>
+        Bamboostr
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <span ng-click="sound();" ng-class="{expanded: isExpanded, 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" menu-toggle="right" style="padding-top: 10px; padding-left: 10px; font-size: 30px; float: right;" class="icon ion-android-notifications-none"><span style="height: 20px;" class="badge badge-assertive" id="contNot">{{contNot}}</span></span>
+    </ion-nav-buttons>
+
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+<ion-content ng-click="sound();" scroll="false">
+    <ion-slide-box x slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+        <ion-slide ion-slide-tab-label="Programados"><ion-nav-view name="tab-dash"></ion-nav-view></ion-slide>
+        <ion-slide ion-slide-tab-label="Contenido"><ion-nav-view name="tab-chats"></ion-nav-view></ion-slide>
+        <ion-slide ion-slide-tab-label="Perfil"><ion-nav-view name="tab-account"></ion-nav-view></ion-slide>
+    </ion-slide-box>
+</ion-content>
+<ion-nav-view name="fabContent"></ion-nav-view>
+<ion-nav-view name="menuContent" ng-class="{expanded: isExpanded}"></ion-nav-view>

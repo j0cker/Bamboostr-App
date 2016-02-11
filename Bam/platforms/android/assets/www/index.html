@@ -1,0 +1,101 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; media-src *">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+
+    <!--<link href="css/ionic.css" rel="stylesheet">-->
+
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <link href="https://fonts.googleapis.com/css?family=RobotoDraft%3A400%2C500%2C700%2C400italic" rel="stylesheet" type="text/css">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ion-md-input/css/ion-md-input.min.css" rel="stylesheet">
+    <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+    <script src="lib/ion-md-input/js/ion-md-input.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development)-->
+    <script src="js/angular-websocket.js"></script>
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="lib/ionic-core.js"></script>
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+    <!--<script src="cordova.js"></script>-->
+
+    <!-- your app's js -->
+    <script src="js/login/app2.js"></script>
+    <script src="js/login/controllers2.js"></script>
+
+    <script src="js/ng-cordova-oauth.min.js"></script>
+    <script src="js/sha1.js"></script>
+</head>
+<body style="text-align: center;" ng-controller="login" class="colorBam" ng-app="starter2">
+
+    <ion-content class="colorBam" scroll="false">
+        <ion-slide-box class="colorBam" slide-tabs-scrollable="false" show-pager="true" on-slide-changed="slideChanged(index)">
+
+            <ion-slide class="colorBam">
+                <div style="" class="row colorBam">
+                    <h3 ng-click="slideChanged2(2);" style="color: white;">Saltar</h3>
+                    <br><br>
+                </div>
+                <div style="height: 150px;" class="colorBam">
+                    <br>
+                    <img alt="" title="" style="width: 300px;" src="img/bamboostr7-blanco.png">
+                </div>
+                <div style="" class="row colorBam">
+                    <h3 style="color: white;">Promociona tus productos y servicios f&#xE1;cil y r&#xE1;pido en redes sociales.</h3>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </ion-slide>
+
+            <ion-slide class="colorBam">
+                <div style="" class="row colorBam">
+                    <h3 ng-click="slideChanged2(2);" style="color: white;">Saltar</h3>
+                    <br><br>
+                </div>
+                <div style="height: 150px;" class="colorBam">
+                    <br>
+                    <img alt="" title="" style="width: 300px;" src="img/bamboostr7-blanco.png">
+                </div>
+                <div style="" class="row colorBam">
+                    <h3 style="color: white;">Promociona tus productos y servicios f&#xE1;cil y r&#xE1;pido en redes sociales.</h3>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </ion-slide>
+
+            <ion-slide class="colorBam">
+                <div style="height: 150px;" class="colorBam">
+                    <br><br><br>
+                    <img alt="" title="" style="width: 300px;" src="img/bamboostr7-blanco.png">
+                </div>
+                <div style="" class="row colorBam">
+                    <h3 style="color: white;">Promociona tus productos y servicios f&#xE1;cil y r&#xE1;pido en redes sociales.</h3>
+                </div>
+                <br><br>
+
+                <button style="color: white; background-color: #46629e;" ng-click="facebookLogin();" class="button button-block colorBamFa animated bounceInRight">
+                    Sign in with Facebook
+                </button>
+
+                <button ng-click="twitterLogin();" class="button button-block button-calm animated bounceInRight">
+                    Sign in with Twitter
+                </button>
+            </ion-slide>
+
+        </ion-slide-box>
+    </ion-content>
+
+</body>
+</html>
