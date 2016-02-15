@@ -1180,8 +1180,15 @@ function escribir($rootScope, $ionicActionSheet, $cordovaNativeAudio, $ionicModa
 
 function agregarRed($rootScope, $cordovaNativeAudio) {
     $rootScope.agregarRed = function (red, screen_name, identify, identify_account, image) {
-
+        console.log("Funcion agregar o quitar red");
+        console.log("Identify: " + identify + " Identify Account: " + identify_account);
         $cordovaNativeAudio.play('click');
+        if (red == "twitter")
+            identify = "" + identify + "tw";
+        if (red == "facebook")
+            identify = "" + identify + "fa";
+        if (red == "instagram")
+            identify = "" + identify + "in";
         var i = 0, a = 0;
         while (a < redesAdd.length) {
             if (redesAdd[a]['id'] == identify && redesAdd[a]['idAccount'] == identify_account) {
@@ -1189,16 +1196,11 @@ function agregarRed($rootScope, $cordovaNativeAudio) {
             }
             a++;
         }
+        console.log("i: " + i +" a: " + a);
         if (i == 0) {
             //no hay nada agregemos
-            console.log("agregar " + identify);
+            console.log("agregar");
             redesAdd[redesAdd.length] = new Array();
-            if (red == "twitter")
-                identify = "" + identify + "tw";
-            if (red == "facebook")
-                identify = "" + identify + "fa";
-            if (red == "instagram")
-                identify = "" + identify + "in";
             redesAdd[redesAdd.length - 1]['id'] = identify;
             redesAdd[redesAdd.length - 1]['idAccount'] = identify_account;
             redesAdd[redesAdd.length - 1]['name'] = screen_name;
