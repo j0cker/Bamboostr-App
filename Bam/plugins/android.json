@@ -185,9 +185,6 @@
         "cordova-instagram-plugin": {
             "PACKAGE_NAME": "com.boogapp.bamboostr"
         },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.boogapp.bamboostr"
-        },
         "cordova-plugin-datepicker": {
             "PACKAGE_NAME": "com.boogapp.bamboostr"
         },
@@ -234,6 +231,9 @@
             "PACKAGE_NAME": "com.boogapp.bamboostr"
         },
         "phonegap-plugin-push": {
+            "PACKAGE_NAME": "com.boogapp.bamboostr"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.boogapp.bamboostr"
         }
     },

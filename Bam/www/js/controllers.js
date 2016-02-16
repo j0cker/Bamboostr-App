@@ -273,7 +273,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
         });
         console.log("Id Remove notificacion");
         console.log(id);
-        var url = 'http://bamboostr.com/scripts/eliminarNotificacion.php';
+        var url = 'http://betatest.bamboostr.com/scripts/eliminarNotificacion.php';
         $http.get(url, { cache: false, params: { id: id } })
            .then(function (response) {
                /*almacenar nuevo usuario*/
@@ -393,7 +393,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
     $rootScope.image_red = storage[0].image_red;
     console.log($rootScope.id_token);
 
-    var url = "http://bamboostr.com/scripts/get-notificaciones.php";
+    var url = "http://betatest.bamboostr.com/scripts/get-notificaciones.php";
     $http.get(url, { cache: false, params: { id_token: $rootScope.id_token, option: '2' } })
          .then(function (response) {
              console.log("Notificaciones");
@@ -413,7 +413,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
              /*ERROR*/
          });
 
-    var url = "http://bamboostr.com/scripts/get-program-message.php";
+    var url = "http://betatest.bamboostr.com/scripts/get-program-message.php";
     $http.get(url, { cache: false, params: { id_token: $rootScope.id_token } })
          .then(function (response) {
              if(response.data.data)
@@ -424,7 +424,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
              /*ERROR*/
          });
 
-    var url = "http://bamboostr.com/scripts/get-rssFeed.php";
+    var url = "http://betatest.bamboostr.com/scripts/get-rssFeed.php";
     $http.get(url, {
         cache: false, params: { categoria: '9', lengua: 'es' },
             headers: {
@@ -529,7 +529,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
             showDelay: 0
         });
         console.log(id);
-        var url = 'http://bamboostr.com/app/delete-program-message.php';
+        var url = 'http://betatest.bamboostr.com/app/delete-program-message.php';
         $http.get(url, { cache: false, params: { id:id } })
            .then(function (response) {
                /*almacenar nuevo usuario*/
@@ -663,7 +663,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
       });
 
       if (type == "cuenta") {
-          var url = 'http://bamboostr.com/app/eliminarUser.php';
+          var url = 'http://betatest.bamboostr.com/app/eliminarUser.php';
           $http.get(url, { cache: true, params: { identifyEliminar: identify, identify: $rootScope.identify, red: $rootScope.red } })
              .then(function (response) {
                  /*almacenar nuevo usuario*/
@@ -691,7 +691,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
                  }, 2000);
              });
       } else {
-          var url = 'http://bamboostr.com/app/delete-fan-pages.php';
+          var url = 'http://betatest.bamboostr.com/app/delete-fan-pages.php';
           $http.get(url, { cache: true, params: { id: id } })
              .then(function (response) {
                  /*almacenar nuevo usuario*/
@@ -785,7 +785,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
                       //console.log(result.access_token);
                       //window.location = "in.html";
 
-                      var url = 'http://bamboostr.com/app/login-facebook.php';
+                      var url = 'http://betatest.bamboostr.com/app/login-facebook.php';
                       $http.get(url, { cache: true, params: { access_token: result.access_token, secundaria: "si", id_token: $rootScope.id_token, user: $rootScope.user, identify: $rootScope.identify, red: $rootScope.red } })
                            .then(function (response) {
                                console.log(response.data);
@@ -840,7 +840,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
                       //console.log(result.oauth_token_secret);
                       //console.log(result.screen_name);
                       //console.log(result.user_id);
-                      var url = 'http://bamboostr.com/app/login-twitter.php';
+                      var url = 'http://betatest.bamboostr.com/app/login-twitter.php';
                       $http.get(url, { cache: true, params: { oauth_token: result.oauth_token, oauth_token_secret: result.oauth_token_secret, secundaria: "si", id_token: $rootScope.id_token, user: $rootScope.user, identify: $rootScope.identify, red: $rootScope.red } })
                            .then(function (response) {
                                console.log(response.data);
@@ -885,7 +885,7 @@ angular.module('starter.controllers', ['ionic-timepicker', 'ngCordova', 'base64'
                       //console.log(result);
                       //console.log(result.access_token);
                       
-                      var url = 'http://bamboostr.com/app/login-instagram.php';
+                      var url = 'http://betatest.bamboostr.com/app/login-instagram.php';
                       $http.get(url, { cache: false, params: { access_token: result.access_token, secundaria: "si", id_token: $rootScope.id_token, user: $rootScope.user, identify: $rootScope.identify, red: $rootScope.red } })
                            .then(function (response) {
                                console.log(response.data);
@@ -1018,7 +1018,7 @@ function escribir($rootScope, $ionicActionSheet, $cordovaNativeAudio, $ionicModa
                     featherEditor.launch({
                         image: 'imagenPre',
                         //url: document.getElementById("imagenPre").getAttribute("src")
-                        url: 'http://bamboostr.com/images/fan-page.png'
+                        url: 'http://betatest.bamboostr.com/images/fan-page.png'
                     });
                     return false;
                     */
@@ -1027,7 +1027,7 @@ function escribir($rootScope, $ionicActionSheet, $cordovaNativeAudio, $ionicModa
                     var image45, container, kit;
 
                     image45 = new Image();
-                    image45.src = "http://bamboostr.com/images/fan-page.png";
+                    image45.src = "http://betatest.bamboostr.com/images/fan-page.png";
 
                     image45.onload = function () {
                         container = document.querySelector("div#editor");
@@ -1114,7 +1114,7 @@ function escribir($rootScope, $ionicActionSheet, $cordovaNativeAudio, $ionicModa
 
 
             var ft = new FileTransfer();
-            ft.upload(imageURI, "http://bamboostr.com/subirImagenes.php", win, fail, options);
+            ft.upload(imageURI, "http://betatest.bamboostr.com/subirImagenes.php", win, fail, options);
 
             function win(r) {
                 console.log("Response = " + r.response + " Code = " + r.responseCode + " Sent = " + r.bytesSent);
@@ -1310,11 +1310,11 @@ function condicionesEnviar(image, caracteres, $http, $rootScope, $ionicLoading, 
               idAccountAdd = redesAdd[i]['idAccount'];
           }
           if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "tw") {
-              var urlPostMassive = 'http://bamboostr.com/twitter/post-media.php';
+              var urlPostMassive = 'http://betatest.bamboostr.com/twitter/post-media.php';
               userTempName = redesAdd[i]['name'];
           }
           else if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "fa") {
-              var urlPostMassive = 'http://bamboostr.com/facebook/post-message.php';
+              var urlPostMassive = 'http://betatest.bamboostr.com/facebook/post-message.php';
               userTempName = redesAdd[i]['name'];
           }
           if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "in" && image == "") {
@@ -1443,27 +1443,27 @@ function condicionesEnviar(image, caracteres, $http, $rootScope, $ionicLoading, 
                   }
                   if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "tw") {
                       if ($rootScope.opcion == 1) {
-                          var urlPostMassive = 'http://bamboostr.com/scripts/post-program-message.php';
+                          var urlPostMassive = 'http://betatest.bamboostr.com/scripts/post-program-message.php';
                       } else {
-                          var urlPostMassive = 'http://bamboostr.com/scripts/post-draft-message.php';
+                          var urlPostMassive = 'http://betatest.bamboostr.com/scripts/post-draft-message.php';
                       }
                       userTempName = redesAdd[i]['name'];
                       redMsg = 'twitter';
                   }
                   else if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "fa") {
                       if ($rootScope.opcion == 1) {
-                          var urlPostMassive = 'http://bamboostr.com/scripts/post-program-message.php';
+                          var urlPostMassive = 'http://betatest.bamboostr.com/scripts/post-program-message.php';
                       } else {
-                          var urlPostMassive = 'http://bamboostr.com/scripts/post-draft-message.php';
+                          var urlPostMassive = 'http://betatest.bamboostr.com/scripts/post-draft-message.php';
                       }
                       userTempName = redesAdd[i]['name'];
                       redMsg = 'facebook';
                   }
                   else if (redesAdd[i]['id'].substr(redesAdd[i]['id'].length - 2, redesAdd[i]['id'].length) == "in") {
                       if ($rootScope.opcion == 1) {
-                          var urlPostMassive = 'http://bamboostr.com/scripts/post-program-message.php';
+                          var urlPostMassive = 'http://betatest.bamboostr.com/scripts/post-program-message.php';
                       } else {
-                          var urlPostMassive = 'http://bamboostr.com/scripts/post-draft-message.php';
+                          var urlPostMassive = 'http://betatest.bamboostr.com/scripts/post-draft-message.php';
                       }
                       userTempName = redesAdd[i]['name'];
                       redMsg = 'instagram';

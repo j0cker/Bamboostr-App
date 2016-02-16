@@ -91,15 +91,42 @@
                 <div style="" class="row colorBam">
                     <h3 style="color: white;">Comienza a generar una comunidad comprometido con tu negocio.</h3>
                 </div>
-                <br><br>
+                
+                <div style="display: block;" id="loginsDiv">
+                    <br><br>
+                    <button style="color: white; background-color: #46629e;" ng-click="facebookLogin();" class="button button-block colorBamFa animated bounceInRight">
+                        Sign in with Facebook
+                    </button>
 
-                <button style="color: white; background-color: #46629e;" ng-click="facebookLogin();" class="button button-block colorBamFa animated bounceInRight">
-                    Sign in with Facebook
-                </button>
+                    <button ng-click="twitterLogin();" class="button button-block button-calm animated bounceInRight">
+                        Sign in with Twitter
+                    </button>
 
-                <button ng-click="twitterLogin();" class="button button-block button-calm animated bounceInRight">
-                    Sign in with Twitter
-                </button>
+                    <button style="color: white; background-color: #8d8d8d;" ng-click="mailLogin();" class="button button-block animated bounceInRight">
+                        Sign in with Username or Mail
+                    </button>
+                </div>
+                <div style="display: none;" id="loginsDiv2">
+                    <div class="list">
+                        <label class="item item-input item-floating-label">
+                            <span style="color: white;" class="input-label">Username o Mail</span>
+                            <input style="color: white;" id="nameISForm" type="text" placeholder="Username o Mail">
+                        </label>
+                        <label class="item item-input item-floating-label">
+                            <span style="color: white;" class="input-label">Password</span>
+                            <input style="color: white;" id="passwordISForm" type="password" placeholder="Password">
+                        </label>
+                    </div>
+                    <button style="color: white; background-color: #01aced;" ng-click="ingresarLogin();" class="button button-block animated bounceInRight">
+                        Ingresar
+                    </button>
+                    <button style="color: white; background-color: #01aced;" ng-click="mailLogin();" class="button button-block animated bounceInRight">
+                        Cancelar
+                    </button>
+                    <a href="http://betatest.bamboostr.com">
+                        Regístrate
+                    </a>
+                </div>
             </ion-slide>
 
         </ion-slide-box>

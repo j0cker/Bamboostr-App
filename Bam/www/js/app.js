@@ -26,13 +26,13 @@ angular.module('starter', ['ionic', 'ionic-modal-select', 'ionic.service.core', 
     $rootScope.identify = storage[0].identify;
     $rootScope.red = storage[0].red;
     $rootScope.image_red = storage[0].image_red;
-    var url = "http://bamboostr.com/app/get-nuevoUser.php";
+    var url = "http://betatest.bamboostr.com/app/get-nuevoUser.php";
     $http.get(url, { cache: false, params: { id_token: $rootScope.id_token, option:'1'} })
          .then(function (response) {
              console.log("Tutorial");
              console.log(response);
              if (response.data.nuevoUser == 0) {
-                 var url = "http://bamboostr.com/app/get-nuevoUser.php";
+                 var url = "http://betatest.bamboostr.com/app/get-nuevoUser.php";
                  $http.get(url, { cache: false, params: { id_token: $rootScope.id_token, option: '2' } })
                    .then(function (response) {
                    }, function (response) {
@@ -54,7 +54,7 @@ angular.module('starter', ['ionic', 'ionic-modal-select', 'ionic.service.core', 
             console.log(notification);
             //e -> title and text
             if (notification.text == "Instagram a atender") {
-                var url = "http://bamboostr.com/scripts/get-notificaciones.php";
+                var url = "http://betatest.bamboostr.com/scripts/get-notificaciones.php";
                 $http.get(url, { cache: false, params: { id_token: $rootScope.id_token, option: '2' } })
                      .then(function (response) {
                          console.log("Notificaciones");
@@ -78,7 +78,7 @@ angular.module('starter', ['ionic', 'ionic-modal-select', 'ionic.service.core', 
             } else {
                 alert('Mensaje Programado: Enviado Correctamente. Te invitamos a programar tu siguiente mensaje.');
             }
-            var url = "http://bamboostr.com/scripts/get-program-message.php";
+            var url = "http://betatest.bamboostr.com/scripts/get-program-message.php";
             $http.get(url, { cache: false, params: { id_token: $rootScope.id_token } })
                  .then(function (response) {
                      if (response.data.data)
@@ -122,7 +122,7 @@ angular.module('starter', ['ionic', 'ionic-modal-select', 'ionic.service.core', 
 
     var callback = function (data) {
         console.log("TOKEN AND USER: " + data.token + " " + $rootScope.id_token);
-        var url = "http://bamboostr.com/app/dev-token.php";
+        var url = "http://betatest.bamboostr.com/app/dev-token.php";
         $http.get(url, { cache: false, params: { id_token: $rootScope.id_token, token: data.token } })
              .then(function (response) {
                  console.log(response);

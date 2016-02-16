@@ -22,20 +22,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-console/www/logger.js",
-        "id": "cordova-plugin-console.logger",
-        "clobbers": [
-            "cordova.logger"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
-        "id": "cordova-plugin-console.console",
-        "clobbers": [
-            "console"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-datepicker/www/android/DatePicker.js",
         "id": "cordova-plugin-datepicker.DatePicker",
         "clobbers": [
@@ -340,7 +326,6 @@ module.exports.metadata =
     "com.synconset.imagepicker": "1.0.7",
     "com.verso.cordova.clipboard": "0.1.0",
     "cordova-instagram-plugin": "0.5.2",
-    "cordova-plugin-console": "1.0.1",
     "cordova-plugin-datepicker": "0.9.2",
     "cordova-plugin-inappbrowser": "1.2.1",
     "cordova-plugin-statusbar": "1.0.1",
@@ -356,7 +341,8 @@ module.exports.metadata =
     "org.apache.cordova.file-transfer": "0.5.0",
     "org.apache.cordova.media": "0.2.16",
     "org.apache.cordova.splashscreen": "1.0.0",
-    "phonegap-plugin-push": "1.4.5"
+    "phonegap-plugin-push": "1.4.5",
+    "org.apache.cordova.console": "0.2.13"
 }
 // BOTTOM OF METADATA
 });
